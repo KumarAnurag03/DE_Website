@@ -14,6 +14,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { withTheme } from "@mui/styles";
 import FeatureCard from "./FeatureCard";
 import useWidth from "../../../shared/functions/useWidth";
+import Button from "@mui/material/Button";
+import { useHistory } from "react-router-dom";
 
 const iconSize = 30;
 
@@ -97,9 +99,15 @@ function FeatureSection(props) {
   const width = useWidth();
   const isWidthUpMd = useMediaQuery(theme.breakpoints.up("md"));
 
+  const history=useHistory();
+
+  const handleClick=()=>{
+    return history.push('/job_seekers');
+  }
+
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
-      <div className="container-fluid lg-p-top">
+      {/* <div className="container-fluid lg-p-top">
         <Typography variant="h3" align="center" className="lg-mg-bottom">
           Features
         </Typography>
@@ -123,8 +131,54 @@ function FeatureSection(props) {
               </Grid>
             ))}
           </Grid>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
+      {/* <Grid container spacing={isWidthUpMd? 10 : 5}>
+        <Grid item xs={12} md={6} lg={4} ></Grid>
+        <Grid item xs={12} md={6} lg={4} ></Grid>
+      </Grid> */}
+
+        <Button
+          style={{
+            // color:"black",
+            borderColor:"blue",
+            width: "80vw",
+            marginLeft:"5%",
+            marginTop:"5%"
+          }}
+          variant="outlined"
+          sx={{
+            ":hover":{
+              bgcolor:"#00008b !important",
+              color:"#FFF"
+            }
+          }}
+          onClick={handleClick}
+        >
+          AVAILABLE OPPORTUNITIES
+        </Button>
+      
+
+        <Button
+          style={{
+            // color:"black",
+            borderColor:"blue",
+            width: "80vw",
+            marginTop:"2%",
+            marginLeft:"15%"
+          }}
+          variant="outlined"
+          sx={{
+            ":hover":{
+              bgcolor:"#00008b !important",
+              color:"#FFF"
+            }
+          }}
+          onClick={()=>{return history.push('/employers')}}
+        >
+          HIRE HELP
+        </Button>
+
     </div>
   );
 }

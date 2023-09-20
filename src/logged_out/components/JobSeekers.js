@@ -1,13 +1,18 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import Reg, { Register } from "./register_login/Register";
 import { Grid, Typography, Card, Button, Hidden, Box } from "@mui/material";
 import withStyles from "@mui/styles/withStyles";
-import WaveBorder from "../../../shared/components/WaveBorder";
-import ZoomImage from "../../../shared/components/ZoomImage";
+// import WaveBorder from "../../../shared/components/WaveBorder";
+// import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Truck from '../../../images/Truck.jpg'
-import './HeadSection.css'
+import Truck from '../../images/Job_Seeker.jpg'
+// import './HeadSection.css'
+import WaveBorder from "../../shared/components/WaveBorder";
+import './JobSeekers.css'
+import { useStateValue } from "../../MyContexts/StateProvider";
+import { useHistory } from 'react-router-dom'
 
 const styles = (theme) => ({
   extraLargeButtonLabel: {
@@ -59,8 +64,8 @@ const styles = (theme) => ({
     },
   },
   wrapper: {
-    position: "relative",
-    backgroundImage:"url('https://www.jobsintrucks.com/img/rwd-jit/hero1.jpg')",
+    backgroundPosition: "relative",
+    backgroundImage:"url('https://cdn.pixabay.com/photo/2017/10/31/09/55/dream-job-2904780_1280.jpg')",
     // backgroundColor: theme.pal ette.secondary.main,
     backgroundRepeat: "no-repeat",
     backgroundSize:"cover",
@@ -73,8 +78,11 @@ const styles = (theme) => ({
     boxShadow: theme.shadows[4],
   },
   container: {
+    backgroundColor:"rgba(0,0,0,0.5)",
+    height:"80%",
+    width:"80%",
     marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(50),
+    marginBottom: theme.spacing(25),
     [theme.breakpoints.down("lg")]: {
       marginBottom: theme.spacing(50),
     },
@@ -91,19 +99,50 @@ const styles = (theme) => ({
     },
   },
   waveBorder: {
-    paddingTop: theme.spacing(4),
+    paddingTop: theme.spacing(5),
   },
 });
 
 function HeadSection(props) {
-  const { classes, theme } = props;
+
+  const history=useHistory();
+
+  const { classes, theme, openRegisterDialog, openLoginDialog } = props;
   const isWidthUpLg = useMediaQuery(theme.breakpoints.up("lg"));
+
+  const [{user},dispatch]=useStateValue();
+
+  const handleClick=()=>{
+    history.push('/joblistings')
+  }
+  const handleClickcon=()=>{
+    history.push('/contact')
+  }
 
   return (
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
-        <div className={classNames("container-fluid", classes.container)}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum facere placeat officiis, rem nobis quia fugit architecto eveniet aliquid labore numquam consequuntur quidem reiciendis dolorem dolorum perferendis qui hic repudiandae odio nesciunt.
+        <div className={classNames("container-fluid", classes.container,"picture")}>
+          <Typography
+            variant="h4"
+            color="white"
+          >
+            Our goal is to find a job that best suits you and your 
+            capabilities so we can get you in a role that you can not only
+             do well in but excel at! We want work to be a place you feel like you are hitting
+              your highest potential and continuing to grow at. Our job is to find that for you. 
+              Not every person is good for every job, so we work to find one that suits you and your needs.
+              Our goal is to find a job that best suits you and your 
+             capabilities so we can get you in a role that you can not only
+             do well in but excel at! We want work to be a place you feel like you are hitting
+              your highest potential and continuing to grow at. Our job is to find that for you. 
+              Not every person is good for every job, so we work to find one that suits you and your needs.
+              Our goal is to find a job that best suits you and your 
+            capabilities so we can get you in a role that you can not only
+             do well in but excel at! We want work to be a place you feel like you are hitting
+              your highest potential and continuing to grow at. Our job is to find that for you. 
+              Not every person is good for every job, so we work to find one that suits you and your needs.
+          </Typography>
           {/* <Box display="flex" justifyContent="center" className="row">
             <Card
               className={classes.card}
@@ -170,6 +209,86 @@ function HeadSection(props) {
         className={classes.waveBorder}
         animationNegativeDelay={2}
       />
+      
+      <Box
+      sx={{
+        backgroundColor:"white",
+        width:"100%",
+        height:"60vh"
+      }}
+      >
+        <Box
+        sx={{
+          backgroundRepeat:"no-repeat",
+          backgroundImage:'url("https://image.slidesdocs.com/responsive-images/slides/0-blue-business-style-company-profile-powerpoint-background_7190a86fdb__960_540.jpg")',
+          backgroundSize:"cover",
+          width:"100%",
+          height:"100%",
+          display:"flex",
+          flexDirection:"row-reverse"
+        }}
+        >
+          <div
+          style={{
+            display:"flex",
+            flexDirection:"column",
+            justifyContent:"center",
+            marginRight:"5%"
+            // alignItems:"center"
+          }}
+          >
+            <Typography variant="h4">In need of skilled professionals?</Typography>
+            <Typography variant="h5"
+            sx={{
+              marginTop:8
+            }}
+            >Learn what more we can do to help you</Typography>
+            <Typography variant="h5"
+            sx={{
+              marginTop:1
+            }}
+            >Contact Dream Employment team and get started</Typography>
+            <Button style={{
+              borderColor:"blue",
+              width:"75%",
+              height:"6vh",
+              marginTop:"15%",
+              marginLeft:"10%"
+              
+            }}
+            variant="outlined"
+            sx={{
+              ":hover":{
+                bgcolor:"#00008b !important",
+                color:"#FFF"
+              }
+            }}
+            onClick={handleClickcon}
+            >Hire Help</Button>
+          </div>
+        </Box>
+      </Box>
+        <Button
+          style={{
+          // color:"blue",
+          borderColor:"blue",
+          width: "90vw",
+          height: "10vh",
+          marginTop:"5%",
+          marginLeft:"5%"
+          }}
+          variant="outlined"
+          sx={{
+          ":hover":{
+              bgcolor:"#00008b !important",
+              color:"#FFF"
+          }
+          }}
+          onClick={handleClick}
+        >
+          AVAILABLE OPPORTUNITIES
+        </Button>
+
     </Fragment>
   );
 }

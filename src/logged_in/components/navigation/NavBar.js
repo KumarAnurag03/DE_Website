@@ -235,7 +235,7 @@ function NavBar(props) {
                 display="inline"
                 color="primary"
               >
-                Wa
+                Dream-
               </Typography>
               <Typography
                 variant="h4"
@@ -243,7 +243,7 @@ function NavBar(props) {
                 display="inline"
                 color="secondary"
               >
-                Ver
+                Employment
               </Typography>
             </Hidden>
           </Box>

@@ -8,6 +8,9 @@ import FormDialog from "../../../shared/components/FormDialog";
 import HighlightedInformation from "../../../shared/components/HighlightedInformation";
 import ButtonCircularProgress from "../../../shared/components/ButtonCircularProgress";
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
+import { Link } from "react-router-dom/cjs/react-router-dom";
+import { auth,db } from "../../../firebase";
+import { useStateValue } from "../../../MyContexts/StateProvider";
 
 const styles = (theme) => ({
   forgotPassword: {
@@ -41,28 +44,35 @@ function LoginDialog(props) {
   } = props;
   const [isLoading, setIsLoading] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const loginEmail = useRef();
-  const loginPassword = useRef();
 
-  const login = useCallback(() => {
+  const [email,setEmail]=useState(null)
+  const [password,setPassword]=useState(null)
+
+  const [{user,firstName,lastName},dispatch]=useStateValue();
+
+  const login =(e) => {
+    e.preventDefault();
     setIsLoading(true);
     setStatus(null);
-    if (loginEmail.current.value !== "test@web.com") {
-      setTimeout(() => {
-        setStatus("invalidEmail");
-        setIsLoading(false);
-      }, 1500);
-    } else if (loginPassword.current.value !== "HaRzwc") {
-      setTimeout(() => {
-        setStatus("invalidPassword");
-        setIsLoading(false);
-      }, 1500);
-    } else {
-      setTimeout(() => {
-        history.push("/c/dashboard");
-      }, 150);
-    }
-  }, [setIsLoading, loginEmail, loginPassword, history, setStatus]);
+    // if (loginEmail.current.value !== "test@web.com") {
+    //   setTimeout(() => {
+    //     setStatus("invalidEmail");
+    //     setIsLoading(false);
+    //   }, 1500);
+    // } else if (loginPassword.current.value !== "HaRzwc") {
+    //   setTimeout(() => {
+    //     setStatus("invalidPassword");
+    //     setIsLoading(false);
+    //   }, 1500);
+    // } else {
+    //   setTimeout(() => {
+    //     history.push("/c/dashboard");
+    //   }, 150);
+    // }
+    console.log(user);
+    auth.signInWithEmailAndPassword(email,password)
+    .then(()=>onClose())
+  }
 
   return (
     <Fragment>
@@ -70,10 +80,7 @@ function LoginDialog(props) {
         open
         onClose={onClose}
         loading={isLoading}
-        onFormSubmit={(e) => {
-          e.preventDefault();
-          login();
-        }}
+        onFormSubmit={(e) => login(e)}
         hideBackdrop
         headline="Login"
         content={
@@ -85,14 +92,15 @@ function LoginDialog(props) {
               required
               fullWidth
               label="Email Address"
-              inputRef={loginEmail}
               autoFocus
               autoComplete="off"
               type="email"
-              onChange={() => {
+              value={email}
+              onChange={(e) => {
                 if (status === "invalidEmail") {
                   setStatus(null);
                 }
+                setEmail(e.target.value)
               }}
               helperText={
                 status === "invalidEmail" &&
@@ -107,12 +115,13 @@ function LoginDialog(props) {
               fullWidth
               error={status === "invalidPassword"}
               label="Password"
-              inputRef={loginPassword}
               autoComplete="off"
-              onChange={() => {
+              value={password}
+              onChange={(e) => {
                 if (status === "invalidPassword") {
                   setStatus(null);
                 }
+                setPassword(e.target.value)
               }}
               helperText={
                 status === "invalidPassword" ? (
@@ -140,9 +149,7 @@ function LoginDialog(props) {
               </HighlightedInformation>
             ) : (
               <HighlightedInformation>
-                Email is: <b>test@web.com</b>
-                <br />
-                Password is: <b>HaRzwc</b>
+                Register <Link to="/register" onClick={onClose}>Here</Link>
               </HighlightedInformation>
             )}
           </Fragment>

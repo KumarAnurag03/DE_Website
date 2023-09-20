@@ -9,6 +9,11 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import BookIcon from "@mui/icons-material/Book";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
+import CallIcon from '@mui/icons-material/Call';
+import Logo from '../../../images/Logo.png'
+import './Navbar.css'
+import { useStateValue } from "../../../MyContexts/StateProvider";
+import { auth } from "../../../firebase";
 
 const styles = theme => ({
   appBar: {
@@ -33,6 +38,18 @@ const styles = theme => ({
 });
 
 function NavBar(props) {
+
+  const [{user},dispatch]=useStateValue();
+
+  const handleClick=()=>{
+    if(user){
+      auth.signOut();
+    }
+    else{
+      openLoginDialog();
+    }
+  }
+
   const {
     classes,
     openRegisterDialog,
@@ -49,19 +66,25 @@ function NavBar(props) {
       icon: <HomeIcon className="text-white" />
     },
     {
-      link: "/blog",
-      name: "Blog",
+      link: "/job_seekers",
+      name: "Job Seekers: Get Hired",
       icon: <BookIcon className="text-white" />
     },
     {
-      name: "Register",
-      onClick: openRegisterDialog,
+      link: "/employers",
+      name: "Employers: Hire Helpful Staff",
+      // onClick: openRegisterDialog,
       icon: <HowToRegIcon className="text-white" />
     },
     {
-      name: "Login",
-      onClick: openLoginDialog,
-      icon: <LockOpenIcon className="text-white" />
+      link: "/contact",
+      name: "Contact",
+      // onClick: openLoginDialog,
+      icon: <CallIcon className="text-white" />
+    },
+    {
+      name:user?"Logout":"Login",
+      onClick:handleClick
     }
   ];
   return (
@@ -69,7 +92,8 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-            <Typography
+            <img className='logo' src={Logo} alt="" />
+            {/* <Typography
               variant="h4"
               className={classes.brandText}
               display="inline"
@@ -84,7 +108,7 @@ function NavBar(props) {
               color="secondary"
             >
               Ver
-            </Typography>
+            </Typography> */}
           </div>
           <div>
             <Hidden mdUp>

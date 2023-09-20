@@ -1,0 +1,7 @@
+.login_text{
+    margin-top: 20%;
+    color: blue;
+    font-size: 150%;
+    display:flex;
+    justify-content: center;
+}

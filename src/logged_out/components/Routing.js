@@ -6,9 +6,15 @@ import Home from "./home/Home";
 import Blog from "./blog/Blog";
 import BlogPost from "./blog/BlogPost";
 import useLocationBlocker from "../../shared/functions/useLocationBlocker";
+import JobSeekers from "./JobSeekers";
+import { Register } from "./register_login/Register";
+import { Contact } from "./register_login/Contact";
+import { Employer } from "./register_login/Employer";
+import { JobListing } from "./register_login/JobListing";
+import { Jobposting } from "./register_login/Jobposting";
 
 function Routing(props) {
-  const { blogPosts, selectBlog, selectHome } = props;
+  const { blogPosts, selectBlog, selectHome, openRegisterDialog, openLoginDialog } = props;
   useLocationBlocker();
   return (
     <Switch>
@@ -28,10 +34,39 @@ function Routing(props) {
       ))}
       <PropsRoute
         exact
-        path="/blog"
-        component={Blog}
-        selectBlog={selectBlog}
-        blogPosts={blogPosts}
+        path="/job_seekers"
+        component={JobSeekers}
+        openRegisterDialog={openRegisterDialog}
+        openLoginDialog={openLoginDialog}
+        // selectBlog={selectBlog}
+        // blogPosts={blogPosts}
+      />
+      <PropsRoute
+        exact
+        path="/register"
+        component={Register}
+      />
+      <PropsRoute
+        exact
+        path="/contact"
+        component={Contact}
+      />
+      <PropsRoute
+        exact
+        path="/employers"
+        component={Employer}
+      />
+      <PropsRoute
+        exact
+        path="/joblistings"
+        component={JobListing}
+        openLoginDialog={openLoginDialog}
+      />
+      <PropsRoute
+        exact
+        path="/jobposting"
+        component={Jobposting}
+        openLoginDialog={openLoginDialog}
       />
       <PropsRoute path="/" component={Home} selectHome={selectHome} />
     </Switch>
