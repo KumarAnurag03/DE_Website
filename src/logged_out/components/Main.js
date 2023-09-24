@@ -45,6 +45,7 @@ function Main(props) {
 
   const openLoginDialog = useCallback(() => {
     setDialogOpen("login");
+    document.title="Login"
     setIsMobileDrawerOpen(false);
   }, [setDialogOpen, setIsMobileDrawerOpen]);
 

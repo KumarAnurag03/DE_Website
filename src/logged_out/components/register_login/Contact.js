@@ -1,8 +1,17 @@
 import { Box, Button, Typography } from '@mui/material';
-import React from 'react'
+import React, { useEffect } from 'react'
+import  Weld  from "../../../images/weld.jpg";
+import Fork from "../../../images/fork.jpg";
+import Fac from "../../../images/fac.jpg";
+import './Contact.css';
 import { Fragment } from "react";
 
 export const Contact = () => {
+
+  useEffect(()=>{
+    document.title="Contacts"
+  },[])
+
   return (
     <div
     style={{
@@ -26,14 +35,14 @@ export const Contact = () => {
       }}
       >
         <Typography variant='h3'>
-          Dispatch and Recruiting
+          Contact us to get Listed
         </Typography>
         <Typography variant='h4'
         style={{
           display:"flex",
           justifyContent:"flex-start",
           alignItems:"center",
-          marginTop:16,
+          marginTop:32,
           marginLeft:64
           }}>
           Brampton
@@ -47,16 +56,6 @@ export const Contact = () => {
           marginLeft:128
           }}>
           Barrie
-        </Typography>
-        <Typography variant='h4'
-        style={{
-          display:"flex",
-          justifyContent:"flex-start",
-          alignItems:"center",
-          marginTop:16,
-          marginLeft:128
-          }}>
-          Fax 
         </Typography>
       </Box>
       <Box
@@ -97,38 +96,53 @@ export const Contact = () => {
       sx={{
         marginTop:"40px",
         // width:"100%",
-        display:"flex"
+        display:"flex",
+        justifyContent: "center"
       }}
       >
-        <div
+        <div className='box1'
         style={{
-          backgroundImage:'url(https://st2.depositphotos.com/1001877/5468/i/450/depositphotos_54681837-stock-photo-mobile-gps-navigation-concept-smartphone.jpg)',
+          backgroundImage: `url(${Fac})` ,
+          backgroundSize: "cover",
           backgroundRepeat:"no-repeat",
-          height:"300px",
-          width:"31%"
+          height:"400px",
+          width:"32.5%"
         }}
         >
           <Typography>Image 1</Typography>
         </div>
-        <div
+        <div className='box1'
         style={{
-          backgroundImage:'url(https://st2.depositphotos.com/1001877/5468/i/450/depositphotos_54681837-stock-photo-mobile-gps-navigation-concept-smartphone.jpg)',
+          backgroundImage: `url(${Fork})`,
+          backgroundSize: "cover",
           backgroundRepeat:"no-repeat",
-          height:"300px",
-          width:"31%"
+          height:"400px",
+          width:"32.5%",
+          marginRight:"8px",
+          marginLeft:"8px",
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center"
         }}
         >
-          <Typography>Image 2</Typography>
+          <Typography className='txt1' variant='h2'>Image 2</Typography>
         </div>
-        <div
+        <div className='box1'
         style={{
-          backgroundImage:'url(https://st2.depositphotos.com/1001877/5468/i/450/depositphotos_54681837-stock-photo-mobile-gps-navigation-concept-smartphone.jpg)',
+          backgroundImage: `url(${Fac})`,
+          backgroundColor:"rgba()",
+          backgroundSize:"cover",
           backgroundRepeat:"no-repeat",
-          height:"300px",
-          width:"31%"
+          height:"400px",
+          width:"32.5%",
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center"
         }}
         >
-          <Typography>Image 3</Typography>
+          <div className='txt1'>
+            <Typography variant='h2'>Image 3</Typography>
+          </div>
         </div>
       </Box>
     </div>

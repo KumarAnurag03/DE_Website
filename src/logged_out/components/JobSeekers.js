@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import Reg, { Register } from "./register_login/Register";
@@ -104,6 +104,10 @@ const styles = (theme) => ({
 });
 
 function HeadSection(props) {
+
+  useEffect(()=>{
+    document.title="Job-Seekers"
+  },[])
 
   const history=useHistory();
 

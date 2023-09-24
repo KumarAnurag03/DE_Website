@@ -23,6 +23,7 @@ export const Register = () => {
     const history=useHistory();
 
     useEffect(()=>{
+        document.title="Register"
         window.scrollTo(0,0);
     },[])
 
