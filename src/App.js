@@ -16,39 +16,39 @@ function App() {
 
   const [{user,firstName,lastName},dispatch]=useStateValue();
 
-  useEffect(()=>{
-    auth.onAuthStateChanged((authUser)=>{
-      if(authUser){
-        // dispatch({
-        //   type:'SET_USET',
-        //   user:authUser
-        // })
-        console.log(authUser);
-        db.collection('users').doc(authUser.uid).get()
-        .then(doc=>{
-          let firstName=doc.data().firstName;
-          let lastName=doc.data().lastName;
-          let company=doc.data().company;
+  // useEffect(()=>{
+  //   auth.onAuthStateChanged((authUser)=>{
+  //     if(authUser){
+  //       // dispatch({
+  //       //   type:'SET_USET',
+  //       //   user:authUser
+  //       // })
+  //       console.log(authUser);
+  //       db.collection('users').doc(authUser.uid).get()
+  //       .then(doc=>{
+  //         let firstName=doc.data().firstName;
+  //         let lastName=doc.data().lastName;
+  //         let company=doc.data().company;
 
-          dispatch({
-            type:'SET_USER',
-            user:authUser,
-            firstName,lastName,company
-          })
-        })
-        console.log("User="+user?.uid+", name="+firstName+" "+lastName);
-      }
-      else{
-        dispatch({
-          type:'SET_USER',
-          user:null,
-          firstName:'',
-          lastName:'',
-          company:[]
-        })
-      }
-    })
-  },[auth])
+  //         dispatch({
+  //           type:'SET_USER',
+  //           user:authUser,
+  //           firstName,lastName,company
+  //         })
+  //       })
+  //       console.log("User="+user?.uid+", name="+firstName+" "+lastName);
+  //     }
+  //     else{
+  //       dispatch({
+  //         type:'SET_USER',
+  //         user:null,
+  //         firstName:'',
+  //         lastName:'',
+  //         company:[]
+  //       })
+  //     }
+  //   })
+  // },[auth])
 
   return (
     <BrowserRouter>

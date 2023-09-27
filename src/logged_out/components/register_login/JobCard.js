@@ -5,60 +5,60 @@ import React from 'react'
 import { db } from '../../../firebase'
 import { useStateValue } from '../../../MyContexts/StateProvider'
 import { useState,useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 export const JobCard = ({jd,jobtype,location,rate,time,status,id}) => {
 
     const [{user,company},dispatch]=useStateValue();
 
-    const [isPresent,setIsPresent]=useState(false);
-
-    useEffect(()=>{
-        for(var i=0;i<company.size;i++){
-            if(id===company[i].id){
-                setIsPresent(true);
-                break;
-            }
-        }
-        console.log(company);
-    },[company])
+    const history=useHistory();
 
     const handleApply=()=>{
-        if(!isPresent){
-            db.collection('users').doc(user.uid).get()
-            .then(doc=>{
-                let newCompanyList=doc.data().company;
-                newCompanyList.push({id});
-                dispatch({
-                    type:"ADD_COMPANY",
-                    company:newCompanyList
-                })
-                db.collection('users').doc(user.uid).set({
-                    ...doc.data(),
-                    company:newCompanyList
-                })
-            })
-        }
-        else{
-            var idx=0;
-            while(idx<company.size && company[idx].id!==id) idx++;
-            company.splice(idx,1);
-            dispatch({
-                type:"ADD_COMPANY",
-                company
-            })
-            db.collection('users').doc(user.uid).get()
-            .then(doc=>{
-                db.collection('users').doc(user.uid).set({
-                    ...doc.data(),
-                    company
-                })
-            })
-            setIsPresent(false);
-        }
+        // if(!isPresent){
+        //     db.collection('users').doc(user.uid).get()
+        //     .then(doc=>{
+        //         let newCompanyList=doc.data().company;
+        //         newCompanyList.push({id});
+        //         dispatch({
+        //             type:"ADD_COMPANY",
+        //             company:newCompanyList
+        //         })
+        //         db.collection('users').doc(user.uid).set({
+        //             ...doc.data(),
+        //             company:newCompanyList
+        //         })
+        //     })
+        // }
+        // else{
+        //     var idx=0;
+        //     while(idx<company.size && company[idx].id!==id) idx++;
+        //     company.splice(idx,1);
+        //     dispatch({
+        //         type:"ADD_COMPANY",
+        //         company
+        //     })
+        //     db.collection('users').doc(user.uid).get()
+        //     .then(doc=>{
+        //         db.collection('users').doc(user.uid).set({
+        //             ...doc.data(),
+        //             company
+        //         })
+        //     })
+        //     setIsPresent(false);
+        // }
+
+        let url=`/register/${id}`
+        history.push(url);
+
     }
 
     const handleDelete=()=>{
         db.collection('Listings').doc(id).delete();
+    }
+
+    const handleShow=()=>{
+        let url=`/applicants/${id}`
+        history.push(url);
     }
 
   return (
@@ -136,12 +136,17 @@ export const JobCard = ({jd,jobtype,location,rate,time,status,id}) => {
                         Posted on {time}
                     </Typography>
                     {status=="admin"?
+                    <>
                         <Button onClick={handleDelete}>
                             Delete
                         </Button>
+                        <Button onClick={handleShow}>
+                            Show Applications
+                        </Button>
+                    </>
                         :
                         <Button onClick={handleApply}>
-                            {isPresent?<>Applied</>:<>Apply</>}
+                            Apply
                         </Button>
                     }
                 </Card>

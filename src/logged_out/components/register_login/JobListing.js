@@ -20,22 +20,21 @@ export const JobListing = ({openLoginDialog}) => {
   const[jobList,setJobList]=useState([]);
 
   useEffect(()=>{
-    if(user){
-      jobsRef
-      .orderBy('createdAt')
-      .onSnapshot(querySnapshot=>{
-        const data=querySnapshot.docs.map(doc=>({
-          ...doc.data()
-        }));
-        setJobList(data);
-      })
-    }
+    jobsRef
+    .orderBy('createdAt')
+    .onSnapshot(querySnapshot=>{
+      const data=querySnapshot.docs.map(doc=>({
+        ...doc.data(),
+        id:doc.id
+      }));
+      setJobList(data);
+    })
   },[user,jobsRef])
 
   return (
     <div>
-
-      {user?
+      {
+        jobList.empty?<>There are no job opportunities right now. Please visit later.</>:
         jobList.map(job=>(
           <JobCard
             jd={job.jd}
@@ -47,8 +46,6 @@ export const JobListing = ({openLoginDialog}) => {
             id={job.id}
           />
         ))
-        :
-        <div class="login_text"><Button onClick={openLoginDialog}>Login</Button> to continue</div>
       }
       
     </div>

@@ -16,12 +16,13 @@ import FormGroup from '@mui/material/FormGroup';
 import { useEffect } from 'react';
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
 import {auth,db} from '../../../firebase.js';
-import { useHistory } from 'react-router-dom' 
+import { useHistory,useParams } from 'react-router-dom' 
 
 export const Register = () => {
 
     const history=useHistory();
-
+    const {jobid}=useParams();
+    
     useEffect(()=>{
         document.title="Register"
         window.scrollTo(0,0);
@@ -245,21 +246,46 @@ export const Register = () => {
     }
 
     const signUp=(e)=>{
-        console.log(email,firstName,lastName);
         e.preventDefault();
-        auth.createUserWithEmailAndPassword(email,password)
-        .then((authUser)=>{
-            db.collection('users').doc(authUser.user.uid).set({
-                firstName,lastName,email,graduate,
-                company:[]
+        // console.log(email,firstName,lastName);
+        // e.preventDefault();
+        // auth.createUserWithEmailAndPassword(email,password)
+        // .then((authUser)=>{
+        //     db.collection('users').doc(authUser.user.uid).set({
+        //         firstName,lastName,email,graduate,
+        //         company:[]
+        //     })
+        //     .then(()=>{
+        //         auth.signInWithEmailAndPassword(email,password)
+        //         .then(auth=>{
+        //             if(auth) history.push('/joblistings')
+        //         }).catch(error=>alert(error.message))
+        //     }).catch(error=>alert(error.message))
+        // }).catch(error=>alert(error.message))
+
+        if(!jobid){
+            history.push('/joblistings')
+        }
+        else{
+            db.collection('Listings').doc(jobid).get()
+            .then(doc=>{
+                console.log(doc.data());
+                let newList=doc.data().list;
+                console.log("newlist: ",newList);
+                newList.push({
+                    firstName,
+                    email
+                })
+
+                db.collection('Listings').doc(jobid).set({
+                    ...doc.data(),list:newList
+                })
+                .then(()=>{
+                    history.push('/thank')
+                })
             })
-            .then(()=>{
-                auth.signInWithEmailAndPassword(email,password)
-                .then(auth=>{
-                    if(auth) history.push('/joblistings')
-                }).catch(error=>alert(error.message))
-            }).catch(error=>alert(error.message))
-        }).catch(error=>alert(error.message))
+        }
+
     }
 
   return (
@@ -310,7 +336,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                {/* <Typography className="form_label" >
                     Create Password:
                 </Typography>
                 <VisibilityPasswordTextField
@@ -326,7 +352,7 @@ export const Register = () => {
                 FormHelperTextProps={{ error: true }}
                 onVisibilityChange={setIsPasswordVisible}
                 isVisible={isPasswordVisible}
-                />
+                /> */}
             </div>
             <div className='email'
             style={{

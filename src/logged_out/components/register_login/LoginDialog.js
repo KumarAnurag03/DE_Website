@@ -54,24 +54,29 @@ function LoginDialog(props) {
     e.preventDefault();
     setIsLoading(true);
     setStatus(null);
-    // if (loginEmail.current.value !== "test@web.com") {
-    //   setTimeout(() => {
-    //     setStatus("invalidEmail");
-    //     setIsLoading(false);
-    //   }, 1500);
-    // } else if (loginPassword.current.value !== "HaRzwc") {
-    //   setTimeout(() => {
-    //     setStatus("invalidPassword");
-    //     setIsLoading(false);
-    //   }, 1500);
-    // } else {
-    //   setTimeout(() => {
-    //     history.push("/c/dashboard");
-    //   }, 150);
-    // }
-    console.log(user);
-    auth.signInWithEmailAndPassword(email,password)
-    .then(()=>onClose())
+    if (email !== "dreamemployment590@gmail.com") {
+      setTimeout(() => {
+        setStatus("invalidEmail");
+        setIsLoading(false);
+      }, 1500);
+    } else if (password!== "Dream123") {
+      setTimeout(() => {
+        setStatus("invalidPassword");
+        setIsLoading(false);
+      }, 1500);
+    } else {
+      setTimeout(() => {
+        dispatch({
+          type:'SET_USER',
+          user:true
+        })
+        history.push("/jobposting");
+        onClose();
+      }, 150);
+    }
+    // console.log(user);
+    // auth.signInWithEmailAndPassword(email,password)
+    // .then(()=>onClose())
   }
 
   return (

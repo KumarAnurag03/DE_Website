@@ -3,13 +3,13 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig={
-    apiKey: "AIzaSyCQDkWPP3NfqDNAgYT9bZEPACdu4UM5aNM",
-    authDomain: "dream-employment-app.firebaseapp.com",
-    projectId: "dream-employment-app",
-    storageBucket: "dream-employment-app.appspot.com",
-    messagingSenderId: "44780810570",
-    appId: "1:44780810570:web:01686a9d7404b82e8811b3",
-    measurementId: "G-0V1H3FLPHY"
+    apiKey: "AIzaSyAMrUbyXTqcMFOmsx2dm7vSPoapQY66WAo",
+    authDomain: "dream-employment.firebaseapp.com",
+    projectId: "dream-employment",
+    storageBucket: "dream-employment.appspot.com",
+    messagingSenderId: "272583459339",
+    appId: "1:272583459339:web:2dc127f170333dbde93d0e",
+    measurementId: "G-KR5HZ522J9"
 };
 
 const firebaseApp=firebase.initializeApp(firebaseConfig);

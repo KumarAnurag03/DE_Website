@@ -12,6 +12,8 @@ import { Contact } from "./register_login/Contact";
 import { Employer } from "./register_login/Employer";
 import { JobListing } from "./register_login/JobListing";
 import { Jobposting } from "./register_login/Jobposting";
+import { Thank } from "./Thank";
+import { Applications } from "./Applications";
 
 function Routing(props) {
   const { blogPosts, selectBlog, selectHome, openRegisterDialog, openLoginDialog } = props;
@@ -43,8 +45,13 @@ function Routing(props) {
       />
       <PropsRoute
         exact
-        path="/register"
+        path="/register/:jobid"
         component={Register}
+      />
+      <PropsRoute
+        exact
+        path="/register/"
+        component={JobListing}
       />
       <PropsRoute
         exact
@@ -68,6 +75,12 @@ function Routing(props) {
         component={Jobposting}
         openLoginDialog={openLoginDialog}
       />
+      <PropsRoute
+        exact
+        path="/applicants/:jobid"
+        component={Applications}
+      />
+      <PropsRoute path="/thank" component={Thank} />
       <PropsRoute path="/" component={Home} selectHome={selectHome} />
     </Switch>
   );

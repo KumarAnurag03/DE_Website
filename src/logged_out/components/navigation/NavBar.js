@@ -81,11 +81,11 @@ function NavBar(props) {
       name: "Contact",
       // onClick: openLoginDialog,
       icon: <CallIcon className="text-white" />
-    },
-    {
-      name:user?"Logout":"Login",
-      onClick:handleClick
     }
+    // {
+    //   name:user?"Logout":"Login",
+    //   onClick:handleClick
+    // }
   ];
   return (
     <div className={classes.root}>
