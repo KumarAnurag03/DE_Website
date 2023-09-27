@@ -1,10 +1,10 @@
 .box1 {
     opacity: 1;
 }
-.box1:hover {
+/* .box1:hover {
     opacity: 0.5;
     transition-duration: 0.7s;
-}
+} */
 
 .txt1:hover{
     opacity: 4;

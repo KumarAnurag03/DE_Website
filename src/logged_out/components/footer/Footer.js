@@ -77,11 +77,11 @@ const styles = (theme) => ({
 const infos = [
   {
     icon: <PhoneIcon />,
-    description: "+1 555 123456",
+    description: "647-327-4487",
   },
   {
     icon: <MailIcon />,
-    description: "support@company.com",
+    description: "info@Dreamemployment.ca",
   },
 ];
 
@@ -213,11 +213,11 @@ function Footer(props) {
           <Grid item xs={12} md={6} lg={3}></Grid>
           <Grid item xs={12} md={6} lg={4}>
             <Typography variant="h6" paragraph className="text-white">
-              About the Company
+              Dream Employment
             </Typography>
             <Typography style={{ color: "#8f9296" }} paragraph>
-              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-              euismod convallis velit, eu auctor lacus vehicula sit amet.
+            Our staffing solutions are adaptable to your business needs,
+             offering temporary, temp-to-perm, and permanent options.
             </Typography>
             <Box display="flex">
               {socialIcons.map((socialIcon, index) => (

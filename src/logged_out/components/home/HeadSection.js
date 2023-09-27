@@ -62,6 +62,7 @@ const styles = (theme) => ({
     position: "relative",
     backgroundImage:"url('https://www.jobsintrucks.com/img/rwd-jit/hero1.jpg')",
     // backgroundColor: theme.pal ette.secondary.main,
+    // backgroundColor:"rgba(0,255,0,0.5)",
     backgroundRepeat: "no-repeat",
     backgroundSize:"cover",
     paddingBottom: theme.spacing(2),
@@ -73,13 +74,17 @@ const styles = (theme) => ({
     boxShadow: theme.shadows[4],
   },
   container: {
-    marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(50),
+    backgroundColor:"rgba(255,255,255,0.4)",
+    borderRadius:"20px",
+    paddingBottom:"2px",
+    // opacity:"1",
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(20),
     [theme.breakpoints.down("lg")]: {
-      marginBottom: theme.spacing(50),
+      marginBottom: theme.spacing(30),
     },
     [theme.breakpoints.down("md")]: {
-      marginBottom: theme.spacing(50),
+      marginBottom: theme.spacing(30),
     },
     [theme.breakpoints.down("md")]: {
       marginBottom: theme.spacing(30),
@@ -103,7 +108,21 @@ function HeadSection(props) {
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container)}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum facere placeat officiis, rem nobis quia fugit architecto eveniet aliquid labore numquam consequuntur quidem reiciendis dolorem dolorum perferendis qui hic repudiandae odio nesciunt.
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} >At </Typography>
+          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
+          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
+          <Typography variant="h3" fontFamily={"serif"}
+          sx={{
+            paddingBottom:"8px"
+          }}
+          >Our mission is clear : </Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"}>Navigating</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,1)"}> Dreams</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"}> to Real Opportunities. We specialize in connecting businesses with</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,1)"}> skilled professionals</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"}> who can drive success on the road and within the warehouse.</Typography>
           {/* <Box display="flex" justifyContent="center" className="row">
             <Card
               className={classes.card}

@@ -31,13 +31,14 @@ export const Contact = () => {
         flexDirection:"column",
         justifyContent:"center",
         alignItems:"center",
-        padding:"100px 100px"
+        paddingTop:"100px"
+        // padding:"100px 50px"
       }}
       >
-        <Typography variant='h3'>
+        <Typography variant='h2' fontFamily={"serif"} color={"rgba(42,20,178,1)"}>
           Contact us to get Listed
         </Typography>
-        <Typography variant='h4'
+        {/* <Typography variant='h4'
         style={{
           display:"flex",
           justifyContent:"flex-start",
@@ -46,19 +47,53 @@ export const Contact = () => {
           marginLeft:64
           }}>
           Brampton
-        </Typography>
-        <Typography variant='h4'
+        </Typography> */}
+        {/* <Typography variant='h4' fontFamily={"serif"}
         style={{
           display:"flex",
           justifyContent:"flex-start",
           alignItems:"center",
-          marginTop:2,
-          marginLeft:128
+          marginTop:64,
+          marginLeft:32
           }}>
-          Barrie
+          Barrie - 647-327-4487 
         </Typography>
+        <Typography variant='h4' fontFamily={"serif"} display={"inline"}
+        style={{
+          display:"flex",
+          justifyContent:"flex-start",
+          alignItems:"center",
+          marginTop:16,
+          marginLeft:32
+          }}>
+          Email at - info@Dreamemployment.ca 
+        </Typography> */}
+        
       </Box>
-      <Box
+      <div style={{
+        backgroundColor:"rgba(0,0,0,1)",
+        width:"100%",
+        height:"0.7vh"
+      }}></div>
+      <div
+      style={{
+        // backgroundColor:"rgba(72,41,178,0.5)",
+        paddingTop:"20px",
+        paddingLeft:"80px",
+        paddingRight:"80px",
+        paddingBottom:"20px"
+      }}
+      >
+        <Typography
+        style={{
+          letterSpacing: 2,
+          lineHeight: 1.2
+        }}
+         variant='h3' fontFamily={"serif"} color={"rgba(42,20,178,1)"}>We  believe in building long-lasting partnerships with both our clients and 
+          candidates. We take the time to understand your unique requirements,
+          ensuring a perfect match that benefits everyone involved.</Typography>
+      </div>
+      {/* <Box
       sx={{
         // marginTop:"60px"
         display:"flex",
@@ -91,16 +126,16 @@ export const Contact = () => {
         >
           SALES
         </Button>
-      </Box>
+      </Box> */}
       <Box
       sx={{
-        marginTop:"40px",
+        // marginTop:"20px",
         // width:"100%",
         display:"flex",
         justifyContent: "center"
       }}
       >
-        <div className='box1'
+        {/* <div className='box1'
         style={{
           backgroundImage: `url(${Fac})` ,
           backgroundSize: "cover",
@@ -126,24 +161,53 @@ export const Contact = () => {
         }}
         >
           <Typography className='txt1' variant='h2'>Image 2</Typography>
-        </div>
+        </div> */}
         <div className='box1'
         style={{
           backgroundImage: `url(${Fac})`,
-          backgroundColor:"rgba()",
           backgroundSize:"cover",
           backgroundRepeat:"no-repeat",
-          height:"400px",
-          width:"32.5%",
+          height:"100vh",
+          width:"100%",
           display:"flex",
+          flexDirection:"row",
           justifyContent:"center",
-          alignItems:"center"
+          alignItems:"start"
         }}
         >
-          <div className='txt1'>
-            <Typography variant='h2'>Image 3</Typography>
-          </div>
-        </div>
+          <div
+          style={{
+          backgroundColor:"rgba(72,41,178)",
+          paddingTop:"2vh",
+          paddingBottom:"2vh",
+          paddingLeft:"4vw",
+          paddingRight:"4vw",
+          marginTop:"25vh"
+        }}
+        >
+        <Typography variant='h3' fontFamily={"serif "}>Ready to streamline your staffing process? Contact us today to discuss your trucking and industrial
+          staffing needs. Let's drive success together!</Typography>
+       </div>
+       <div
+          style={{
+          backgroundColor:"rgba(0,0,0,0.8)",
+          height:"42.3vh",
+          display:"flex",
+          flexDirection:"column",
+          justifyContent:"center",
+          alignItems:"center",
+          paddingTop:"2vh",
+          paddingBottom:"2vh",
+          paddingLeft:"4vw",
+          paddingRight:"4vw",
+          marginTop:"25vh"
+        }}
+        >
+        <Typography variant='h3' fontFamily={"serif "} style={{paddingBottom:"20px"}} color={"rgba(72,41,178,1)"} >Call at - 647-327-4487</Typography>
+        <Typography variant='h3' fontFamily={"serif"} color={"rgba(71,42,178,1)"}>info@Dreamemployment.ca</Typography>
+       </div>
+
+      </div>
       </Box>
     </div>
   )
