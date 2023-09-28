@@ -143,6 +143,7 @@ function FeatureSection(props) {
             // color:"black",
             borderColor:"blue",
             width: "80vw",
+            height:"8vh",
             marginLeft:"5%",
             marginTop:"5%"
           }}
@@ -155,7 +156,7 @@ function FeatureSection(props) {
           }}
           onClick={handleClick}
         >
-          AVAILABLE OPPORTUNITIES
+          JOB SEEKERS : GET HIRED
         </Button>
       
 
@@ -164,6 +165,7 @@ function FeatureSection(props) {
             // color:"black",
             borderColor:"blue",
             width: "80vw",
+            height:"8vh",
             marginTop:"2%",
             marginLeft:"15%"
           }}
@@ -176,7 +178,7 @@ function FeatureSection(props) {
           }}
           onClick={()=>{return history.push('/employers')}}
         >
-          HIRE HELP
+          EMPLOYERS : HIRE HELP
         </Button>
 
     </div>

@@ -41,9 +41,9 @@ export const Employer = () => {
           </div>
         </div> */}
         <Typography color={"rgba(41,72,178,1)"} style={{ marginBottom:"2vh",
-            fontWeight:"bold",
+            // fontWeight:"bold",
             textAlign:"center"
-          }} fontFamily={"serif"} variant='h4'>Who we are</Typography>
+          }} fontFamily={"serif"} variant='h2'>Who we are</Typography>
           <div
           style={{
             backgroundColor:"rgba(72,41,178,1)",
@@ -229,7 +229,15 @@ export const Employer = () => {
               alignItems:"center"
             }}
              variant='h3' color={"rgba(41,72,178)"} fontFamily={"serif"}
-            >To add your company to the listings, Hire Us</Typography>
+            >In need of skilled professionals?</Typography>
+            <Typography sx={{
+              paddingTop:"2vh",
+              display:"flex",
+              justifyContent:"center",
+              alignItems:"center"
+            }}
+             variant='h4' color={"rgba(41,72,178)"} fontFamily={"serif"}
+            >Hire Dream Employment Recruitment Agency to get started</Typography>
             <Button
               style={{
               // color:"blue",

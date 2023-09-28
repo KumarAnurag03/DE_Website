@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { db  } from '../../../firebase';
 import { useEffect } from 'react';
 import './JobListing.css'
-import { Button } from '@mui/material';
+import { Typography } from '@mui/material';
 
 
 export const JobListing = ({openLoginDialog}) => {
@@ -32,7 +32,19 @@ export const JobListing = ({openLoginDialog}) => {
   },[user,jobsRef])
 
   return (
-    <div>
+    <div style={{
+      marginTop:"15vh"
+    }}
+    >
+      <Typography color={"rgba(71,42,178)"} variant='h3' fontFamily={"serif"}
+        sx={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+        }}
+        >
+            Job Listings
+        </Typography>
       {
         jobList.empty?<>There are no job opportunities right now. Please visit later.</>:
         jobList.map(job=>(

@@ -1,0 +1,37 @@
+.personal-form-body{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+}
+
+.validation{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+}
+.prev_Emp{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+}
+
+.education{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+}
+
+.reference{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+}
+.name .form_input #lastName{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form_label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}

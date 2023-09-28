@@ -67,7 +67,7 @@ export const JobCard = ({jd,jobtype,location,rate,time,status,id}) => {
         marginTop:100
     }}
     >
-        <Typography variant='h3'
+        {/* <Typography color={"rgba(71,42,178)"} variant='h3' fontFamily={"serif"}
         sx={{
             display:"flex",
             justifyContent:"center",
@@ -75,7 +75,7 @@ export const JobCard = ({jd,jobtype,location,rate,time,status,id}) => {
         }}
         >
             Job Listings
-        </Typography>
+        </Typography> */}
         <Box
         sx={{
             display: 'flex',

@@ -16,7 +16,8 @@ import FormGroup from '@mui/material/FormGroup';
 import { useEffect } from 'react';
 import VisibilityPasswordTextField from "../../../shared/components/VisibilityPasswordTextField";
 import {auth,db} from '../../../firebase.js';
-import { useHistory,useParams } from 'react-router-dom' 
+import { useHistory,useParams } from 'react-router-dom';
+import './Register.css' 
 
 export const Register = () => {
 
@@ -292,10 +293,10 @@ export const Register = () => {
     <div>
         <div
         style={{
-            marginTop: "5%"
+            marginTop: "13vh"
         }}
-        >testing...</div>
-        <Typography variant="h3">
+        ></div>
+        <Typography color={"rgba(71,42,178)"} fontFamily={"serif"} variant="h3">
             Personal Information
         </Typography>
         <div className='personal-form-body'>
@@ -305,13 +306,13 @@ export const Register = () => {
                 <input className='form_input' type='text' value={lastName} onChange={(e) => handleInputChange(e)} id='lastName' placeholder='Last Name'/>
             </div> */}
             <div className='name'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Full Name:
                 </Typography>
                 <TextField
@@ -355,13 +356,13 @@ export const Register = () => {
                 /> */}
             </div>
             <div className='email'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Email-ID:
                 </Typography>
                 <TextField
@@ -379,13 +380,13 @@ export const Register = () => {
                 />
             </div>
             <div className='address'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Address:
                 </Typography>
                 <TextField
@@ -443,12 +444,12 @@ export const Register = () => {
             </div>
             <div className='phone_cell'
             style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
+                display:"block",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Phone:
                 </Typography>
                 
@@ -465,13 +466,13 @@ export const Register = () => {
                 
             </div>
             <div className='avail_birth'
-            style={{
-                display:"flex",
-                justifyContent:"start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     paddingLeft:"5vw",
+            //     display:"inline-flex",
+            //     flexDirection:"column"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Availability:
                 </Typography>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -486,7 +487,7 @@ export const Register = () => {
                         }}
                     />
                 </LocalizationProvider>
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Date of Birth:
                 </Typography>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -503,19 +504,19 @@ export const Register = () => {
                 </LocalizationProvider>
             </div>
         </div>
-        <Typography variant="h3">
+        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
             Truck Driver validation 
         </Typography>
         <div className='validation'>
             
             <div className='license'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     License # :
                 </Typography>
                 
@@ -530,7 +531,7 @@ export const Register = () => {
                     margin="normal"
                 />
                 
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Expiry :
                 </Typography>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -549,12 +550,13 @@ export const Register = () => {
 
             <div className='license'
             style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
+                marginTop:"1vh"
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     License Province :
                 </Typography>
                 
@@ -569,7 +571,7 @@ export const Register = () => {
                     margin="normal"
                 />
                 
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Birth Country :
                 </Typography>
                 <TextField
@@ -585,15 +587,20 @@ export const Register = () => {
                 
             </div>
         </div>
-        <Typography variant="h3">
+        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
             Work Experience
         </Typography>
-        <div>
-            <Typography variant="h5">
+        <div style={{
+            paddingLeft:"2vw",
+            paddingTop:"2vh",
+            width:"60%"
+        }}
+        >
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Available Times
             </Typography>
             <FormControl component="fieldset">
-                <FormGroup aria-label="position" row>
+                <FormGroup  aria-label="position" row>
                     <FormControlLabel
                     value="monday"
                     control={<Checkbox />}
@@ -638,7 +645,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Certifications
             </Typography>
             <FormControl component="fieldset">
@@ -657,7 +664,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Forklift
             </Typography>
             <FormControl component="fieldset">
@@ -718,7 +725,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 G Class Driver
             </Typography>
             <FormControl component="fieldset">
@@ -743,7 +750,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 General Labour
             </Typography>
             <FormControl component="fieldset">
@@ -774,7 +781,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Hospitality
             </Typography>
             <FormControl component="fieldset">
@@ -889,7 +896,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Hospitality Clients
             </Typography>
             <FormControl component="fieldset">
@@ -944,7 +951,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Languages
             </Typography>
             <FormControl component="fieldset">
@@ -963,7 +970,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Machine Operator 
             </Typography>
             <FormControl component="fieldset">
@@ -994,7 +1001,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Management
             </Typography>
             <FormControl component="fieldset">
@@ -1025,7 +1032,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Manufacturing
             </Typography>
             <FormControl component="fieldset">
@@ -1062,7 +1069,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Warehouse
             </Typography>
             <FormControl component="fieldset">
@@ -1105,7 +1112,7 @@ export const Register = () => {
                     />
                 </FormGroup>
             </FormControl>
-            <Typography variant="h5">
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 Welding
             </Typography>
             <FormControl component="fieldset">
@@ -1131,21 +1138,21 @@ export const Register = () => {
                 </FormGroup>
             </FormControl>
         </div>
-        <Typography variant="h3">
+        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
             References
         </Typography>
         <div className='reference'>
-            <Typography>
-                Please list two professional references.
+            <Typography color={"rgba(71,42,178)"} fontFamily={"sans-serif"}>
+                Please list one professional references.
             </Typography>
             <div className='name_rel'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Full Name :
                 </Typography>
                 <TextField
@@ -1158,7 +1165,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Relationship :
                 </Typography>
                 <TextField
@@ -1172,13 +1179,13 @@ export const Register = () => {
                 />
             </div>
             <div className='Comp_Phone'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Company :
                 </Typography>
                 <TextField
@@ -1191,7 +1198,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Phone :
                 </Typography>
                 <TextField
@@ -1206,13 +1213,13 @@ export const Register = () => {
                 />
             </div>
             <div className='email'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Address :
                 </Typography>
                 <TextField
@@ -1230,21 +1237,26 @@ export const Register = () => {
                 />
             </div>
         </div>
-        <Typography variant="h3">
+        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
             Education
         </Typography>
         <div className='education'>
             <div className='name_rel'
             style={{
+                width:"60%",
                 display:"flex",
                 justifyContent:"flex-start",
                 alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     High School :
                 </Typography>
                 <TextField
+                    sx={{
+                        paddingRight:"2vw",
+                        width:"25vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={highschool}
@@ -1254,12 +1266,12 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} sx={{paddingLeft:"5vw"}} className="form_label" >
                     Address :
                 </Typography>
                 <TextField
                     style={{
-                        width:"50vw"
+                        width:"40vw"
                     }}
                     className="form_input"
                     type="text"
@@ -1271,13 +1283,13 @@ export const Register = () => {
                 />
             </div>
             <div className='specs'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     From :
                 </Typography>
                 <TextField
@@ -1290,7 +1302,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     To :
                 </Typography>
                 <TextField
@@ -1303,7 +1315,7 @@ export const Register = () => {
                     placeholder='Enter year'
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     Did you graduate?  
                 </Typography>
                 <FormControl>
@@ -1318,8 +1330,8 @@ export const Register = () => {
                         <FormControlLabel value="no" control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
-                <Typography>
-                    .   Degree :
+                <Typography color={"rgba(71,42,178)"}>
+                    Degree :
                 </Typography>
                 <TextField
                     className="form_input"
@@ -1334,15 +1346,20 @@ export const Register = () => {
             </div>
             <div className='name_rel'
             style={{
+                width:"60%",
                 display:"flex",
                 justifyContent:"flex-start",
                 alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     College :
                 </Typography>
                 <TextField
+                    sx={{
+                        paddingRight:"2vw",
+                        width:"25vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={college}
@@ -1352,12 +1369,12 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} sx={{paddingLeft:"5vw"}} className="form_label" >
                     Address :
                 </Typography>
                 <TextField
                     style={{
-                        width:"50vw"
+                        width:"40vw"
                     }}
                     className="form_input"
                     type="text"
@@ -1369,13 +1386,13 @@ export const Register = () => {
                 />
             </div>
             <div className='specs'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     From :
                 </Typography>
                 <TextField
@@ -1388,7 +1405,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     To :
                 </Typography>
                 <TextField
@@ -1401,7 +1418,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     Did you graduate?  
                 </Typography>
                 <FormControl>
@@ -1414,8 +1431,8 @@ export const Register = () => {
                         <FormControlLabel value="no" control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
-                <Typography>
-                    .   Degree :
+                <Typography color={"rgba(71,42,178)"}>
+                    Degree :
                 </Typography>
                 <TextField
                     className="form_input"
@@ -1430,15 +1447,20 @@ export const Register = () => {
             </div>
             <div className='name_rel'
             style={{
+                width:"60%",
                 display:"flex",
                 justifyContent:"flex-start",
                 alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Other :
                 </Typography>
                 <TextField
+                    sx={{
+                        paddingRight:"2vw",
+                        width:"25vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={other}
@@ -1448,12 +1470,12 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} sx={{paddingLeft:"5vw"}} className="form_label" >
                     Address :
                 </Typography>
                 <TextField
                     style={{
-                        width:"50vw"
+                        width:"40vw"
                     }}
                     className="form_input"
                     type="text"
@@ -1465,13 +1487,13 @@ export const Register = () => {
                 />
             </div>
             <div className='specs'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     From :
                 </Typography>
                 <TextField
@@ -1484,7 +1506,7 @@ export const Register = () => {
                     placeholder='Enter year'
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     To :
                 </Typography>
                 <TextField
@@ -1497,7 +1519,7 @@ export const Register = () => {
                     placeholder='Enter year'
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"}>
                     Did you graduate?  
                 </Typography>
                 <FormControl>
@@ -1510,8 +1532,8 @@ export const Register = () => {
                         <FormControlLabel value="no" control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
-                <Typography>
-                    .   Degree :
+                <Typography color={"rgba(71,42,178)"}>
+                    Degree :
                 </Typography>
                 <TextField
                     className="form_input"
@@ -1525,18 +1547,18 @@ export const Register = () => {
                 />
             </div>
         </div>
-        <Typography variant="h3">
+        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
             Agency Work Experience
         </Typography>
         <div className='reference'>
             <div className='name_rel'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Agency Name :
                 </Typography>
                 <TextField
@@ -1548,7 +1570,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Pay Rate :
                 </Typography>
                 <TextField
@@ -1563,13 +1585,13 @@ export const Register = () => {
                 />
             </div>
             <div className='Comp_Phone'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Company Assigned to :
                 </Typography>
                 <TextField
@@ -1581,7 +1603,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Position :
                 </Typography>
                 <TextField
@@ -1595,21 +1617,26 @@ export const Register = () => {
                 />
             </div>
         </div>
-        <Typography variant="h3">
+        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
             Previous Employment
         </Typography>
         <div className='prev_Emp'>
            <div className='Comp_Phone'
             style={{
-                display:"flex",
+                width:"60%",
+                display:"inline-flex",
                 justifyContent:"flex-start",
                 alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"}  className="form_label" >
                     Company :
                 </Typography>
                 <TextField
+                    sx={{
+                        marginRight:"2vh",
+                        width:"20vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={prevcompany}
@@ -1619,10 +1646,13 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} sx={{marginLeft:"7vw"}} className="form_label" >
                     Phone :
                 </Typography>
                 <TextField
+                    sx={{
+                        width:"25vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={prevphone}
@@ -1635,15 +1665,20 @@ export const Register = () => {
             </div>
             <div className='Add_Sup'
             style={{
+                width:"60%",
                 display:"flex",
                 justifyContent:"flex-start",
                 alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Address :
                 </Typography>
                 <TextField
+                    sx={{
+                        marginRight:"2vh",
+                        width:"20vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={prevaddress}
@@ -1653,10 +1688,13 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} sx={{marginLeft:"7vw"}} className="form_label" >
                     Supervisor :
                 </Typography>
                 <TextField
+                    sx={{
+                        width:"25vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={supervisor}
@@ -1668,12 +1706,13 @@ export const Register = () => {
             </div>
             <div className='Job_Salary'
             style={{
+                width:"60%",
                 display:"flex",
                 justifyContent:"flex-start",
                 alignItems:"center"
             }}
             >
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Job Title :
                 </Typography>
                 <TextField
@@ -1686,7 +1725,9 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} sx={{
+                    marginLeft:"1vw"
+                }} className="form_label" >
                     Starting Salary :
                 </Typography>
                 <TextField
@@ -1698,7 +1739,9 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography className="form_label" >
+                <Typography color={"rgba(71,42,178)"} sx={{
+                    marginLeft:"1vw"
+                }} className="form_label" >
                     Ending Salary :
                 </Typography>
                 <TextField
@@ -1718,10 +1761,14 @@ export const Register = () => {
                 alignItems:"center"
             }}
             >
-                <Typography>
+                <Typography color={"rgba(71,42,178)"} sx={{marginRight:"-18vw"}} className="form_label">
                     Responsibilities :
                 </Typography>
                 <TextField
+                    sx={{
+                        width:"30vw",
+                        marginRight:"2vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={responsibility}
@@ -1733,13 +1780,13 @@ export const Register = () => {
                 
             </div>
             <div className='specs'
-            style={{
-                display:"flex",
-                justifyContent:"flex-start",
-                alignItems:"center"
-            }}
+            // style={{
+            //     display:"flex",
+            //     justifyContent:"flex-start",
+            //     alignItems:"center"
+            // }}
             >
-                <Typography>
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     From :
                 </Typography>
                 <TextField
@@ -1751,7 +1798,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     To :
                 </Typography>
                 <TextField
@@ -1763,7 +1810,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography>
+                <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Reason for leaving :
                 </Typography>
                 <TextField
@@ -1777,7 +1824,7 @@ export const Register = () => {
                     margin="normal"
                 />
             </div>
-            <Typography>
+            <Typography color={"rgba(71,42,178)"} className="form_label" >
                 May we contact your previous supervisor for a reference?: 
             </Typography>
             <FormControl>
@@ -1792,14 +1839,27 @@ export const Register = () => {
             </FormControl>
         </div>
         <div>
-        <Typography variant="h4">
+        <Typography color={"rgba(71,42,178)"} sx={{
+            display:"flex",
+            justifyContent:"center",
+            width:"60%",
+            alignItems:"center"
+        }} fontFamily={"serif"} variant="h4">
             Disclamer
         </Typography>
-        <Typography>
+        <Typography color={"rgba(71,42,178)"} variant='h5' sx={{
+            paddingLeft:"2vw",
+            width:"60%",
+            paddingRight:"2vw",
+            paddingBottom:"2vh"
+        }} 
+        >
         I hereby certify that the information given on this application form and enclosures to be true and accurate, and grant Help Unlimited permission to use this information at their discretion. If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release. I acknowledge that will
 deduct the cost of any ETR bill fees from my pay. This company is under the Elect to Work Policy.
         </Typography>
-        <Button
+        <Button sx={{
+            marginLeft:"24%"
+        }}
         variant="outlined"
         onClick={signUp}
         >

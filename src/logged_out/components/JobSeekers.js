@@ -7,7 +7,8 @@ import withStyles from "@mui/styles/withStyles";
 // import WaveBorder from "../../../shared/components/WaveBorder";
 // import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Truck from '../../images/Job_Seeker.jpg'
+import Fork from "../../images/fork.jpg";
+import Drive from '../../images/drive.jpg'
 // import './HeadSection.css'
 import WaveBorder from "../../shared/components/WaveBorder";
 import './JobSeekers.css'
@@ -65,10 +66,11 @@ const styles = (theme) => ({
   },
   wrapper: {
     backgroundPosition: "relative",
-    backgroundImage:"url('https://cdn.pixabay.com/photo/2017/10/31/09/55/dream-job-2904780_1280.jpg')",
-    // backgroundColor: theme.pal ette.secondary.main,
-    backgroundRepeat: "no-repeat",
+    // backgroundImage:"url('https://cdn.pixabay.com/photo/2017/10/31/09/55/dream-job-2904780_1280.jpg')",
+    backgroundImage:`url(${Drive})`,
     backgroundSize:"cover",
+    // backgroundColor: theme.palette.secondary.main,
+    backgroundRepeat: "no-repeat",
     paddingBottom: theme.spacing(2),
   },
   image: {
@@ -78,16 +80,16 @@ const styles = (theme) => ({
     boxShadow: theme.shadows[4],
   },
   container: {
-    backgroundColor:"rgba(0,0,0,0.5)",
-    height:"80%",
-    width:"80%",
+    backgroundColor:"rgba(255,255,255,0.4)",
+    borderRadius:"20px",
+    paddingBottom:"2px",
     marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(25),
+    marginBottom: theme.spacing(20),
     [theme.breakpoints.down("lg")]: {
-      marginBottom: theme.spacing(50),
+      marginBottom: theme.spacing(30),
     },
     [theme.breakpoints.down("md")]: {
-      marginBottom: theme.spacing(50),
+      marginBottom: theme.spacing(30),
     },
     [theme.breakpoints.down("md")]: {
       marginBottom: theme.spacing(30),
@@ -127,21 +129,14 @@ function HeadSection(props) {
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container,"picture")}>
-          <Typography
-            variant="h4"
-            color="white"
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} >At </Typography>
+          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
+          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
+          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
+          <Typography variant="h3" fontFamily={"serif"}
           >
             Our goal is to find a job that best suits you and your 
-            capabilities so we can get you in a role that you can not only
-             do well in but excel at! We want work to be a place you feel like you are hitting
-              your highest potential and continuing to grow at. Our job is to find that for you. 
-              Not every person is good for every job, so we work to find one that suits you and your needs.
-              Our goal is to find a job that best suits you and your 
-             capabilities so we can get you in a role that you can not only
-             do well in but excel at! We want work to be a place you feel like you are hitting
-              your highest potential and continuing to grow at. Our job is to find that for you. 
-              Not every person is good for every job, so we work to find one that suits you and your needs.
-              Our goal is to find a job that best suits you and your 
             capabilities so we can get you in a role that you can not only
              do well in but excel at! We want work to be a place you feel like you are hitting
               your highest potential and continuing to grow at. Our job is to find that for you. 
@@ -214,7 +209,7 @@ function HeadSection(props) {
         animationNegativeDelay={2}
       />
       
-      <Box
+      {/* <Box
       sx={{
         backgroundColor:"white",
         width:"100%",
@@ -271,7 +266,7 @@ function HeadSection(props) {
             >Hire Help</Button>
           </div>
         </Box>
-      </Box>
+      </Box> */}
         <Button
           style={{
           // color:"blue",
@@ -290,7 +285,7 @@ function HeadSection(props) {
           }}
           onClick={handleClick}
         >
-          AVAILABLE OPPORTUNITIES
+          AVAILABLE OPPORTUNITIES : APPLY NOW
         </Button>
 
     </Fragment>

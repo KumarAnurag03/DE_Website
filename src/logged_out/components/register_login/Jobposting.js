@@ -153,7 +153,15 @@ export const Jobposting = ({openLoginDialog}) => {
                     <Button onClick={handleSubmit}>
                         Post
                     </Button>
-        
+                    <Typography color={"rgba(71,42,178)"} variant='h3' fontFamily={"serif"}
+                    sx={{
+                        display:"flex",
+                        justifyContent:"center",
+                        alignItems:"center"
+                    }}
+                    >
+                        Job Listings
+                    </Typography>
                     {jobList.map(job=>(
                         <JobCard
                             jd={job.jd}
