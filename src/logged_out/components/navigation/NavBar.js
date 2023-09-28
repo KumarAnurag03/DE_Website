@@ -10,7 +10,8 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import BookIcon from "@mui/icons-material/Book";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import CallIcon from '@mui/icons-material/Call';
-import Logo from '../../../images/Logo.png'
+import Logo from '../../../images/Logo.png';
+import  Newlogo  from "../../../images/Studio-Project 2.jpg";
 import './Navbar.css'
 import { useStateValue } from "../../../MyContexts/StateProvider";
 import { auth } from "../../../firebase";
@@ -81,6 +82,11 @@ function NavBar(props) {
       name: "Contact",
       // onClick: openLoginDialog,
       icon: <CallIcon className="text-white" />
+    },
+    {
+      link: "/jobposting",
+      name: "ADMIN",
+      icon: <BookIcon className="text-white" />
     }
     // {
     //   name:user?"Logout":"Login",
@@ -92,7 +98,7 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-            <img className='logo' src={Logo} alt="" />
+            <img className='logo' src={Newlogo} alt="" />
             {/* <Typography
               variant="h4"
               className={classes.brandText}

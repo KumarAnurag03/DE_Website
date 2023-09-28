@@ -275,7 +275,10 @@ export const Register = () => {
                 console.log("newlist: ",newList);
                 newList.push({
                     firstName,
-                    email
+                    email,lastName,address,city,province,landmark,
+                    graduate,degree,degreeother,phone,date_avail,date_birth,date_expire,
+                    licenseno,licenseprov,relationship,prevcompany,prevaddress,prevphone
+                    ,jobtitle,responsibility,reason,agency,payrate
                 })
 
                 db.collection('Listings').doc(jobid).set({
