@@ -82,8 +82,10 @@ const styles = (theme) => ({
   container: {
     backgroundColor:"rgba(255,255,255,0.4)",
     borderRadius:"20px",
-    paddingBottom:"2px",
-    marginTop: theme.spacing(6),
+    paddingBottom:"3vh",
+    paddingLeft:"6vw",
+    paddingRight:"4vw",
+    marginTop: theme.spacing(10),
     marginBottom: theme.spacing(20),
     [theme.breakpoints.down("lg")]: {
       marginBottom: theme.spacing(30),
@@ -129,18 +131,19 @@ function HeadSection(props) {
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container,"picture")}>
-          <Typography variant="h3" fontFamily={"serif"} display={"inline"} >At </Typography>
-          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
-          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
-          <Typography variant="h3" fontFamily={"serif"}
+          <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(0,0,0)"}>At </Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
+          <Typography variant="h4" color={"rgba(0,0,0)"} fontFamily={"serif"}
           >
-            Our goal is to find a job that best suits you and your 
-            capabilities so we can get you in a role that you can not only
-             do well in but excel at! We want work to be a place you feel like you are hitting
-              your highest potential and continuing to grow at. Our job is to find that for you. 
-              Not every person is good for every job, so we work to find one that suits you and your needs.
+            We understand that the journey to finding your ideal job can be both exciting and challenging. That's
+why Dream Employment is here to support you every step of the way. Whether you're a seasoned
+professional looking for your next career move or a recent graduate eager to kick-start your journey,
+Explore <b>Available Opportunities</b> to discover a wide range of job openings from leading companies in
+various industries, or <b>Apply with Us</b> to benefit from our team's expertise. Your dream job is within
+reach, and we're here to help you seize it. Join us on this path to success!
           </Typography>
           {/* <Box display="flex" justifyContent="center" className="row">
             <Card

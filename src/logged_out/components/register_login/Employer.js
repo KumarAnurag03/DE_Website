@@ -40,13 +40,13 @@ export const Employer = () => {
 
           </div>
         </div> */}
-        <Typography color={"rgba(41,72,178,1)"} style={{ marginBottom:"2vh",
+        <Typography color={"rgba(0,0,0,1)"} style={{ marginBottom:"2vh",
             // fontWeight:"bold",
             textAlign:"center"
           }} fontFamily={"serif"} variant='h2'>Who we are</Typography>
           <div
           style={{
-            backgroundColor:"rgba(72,41,178,1)",
+            backgroundColor:"rgba(0,0,0,1)",
             height:"0.7vh"
           }}
           ></div>
@@ -64,7 +64,7 @@ export const Employer = () => {
           }}
           >
             
-            <Typography variant='h5' color={"rgba(41,72,178,0.7)"} fontFamily={"sans-serif"}
+            <Typography variant='h5' color={"rgba(0,0,0,0.7)"} fontFamily={"sans-serif"}
             style={{
               paddingTop:"1vh",
               textAlign:"center",
@@ -75,7 +75,7 @@ export const Employer = () => {
             }}
             >Our staffing solutions are adaptable to your business needs, offering temporary, temp-to-perm, and
             permanent options.</Typography>
-            <Typography variant='h5' color={"rgba(41,72,178,0.7)"} fontFamily={"sans-serif"}
+            <Typography variant='h5' color={"rgba(0,0,0,0.7)"} fontFamily={"sans-serif"}
             style={{
               textAlign:"center",
               // paddingLeft:"25vw",
@@ -86,7 +86,7 @@ export const Employer = () => {
               lineHeight: 1.5
             }}
             > Our commitment to quality sets us apart:</Typography>
-            <Typography variant='h5' color={"rgba(41,72,178,0.7)"} fontFamily={"sans-serif"}
+            <Typography variant='h5' color={"rgba(0,0,0,0.7)"} fontFamily={"sans-serif"}
             style={{
               textAlign:"left",
               // paddingLeft:"25vw",
@@ -97,7 +97,7 @@ export const Employer = () => {
             ><b><LabelImportantOutlinedIcon/> Quality Candidates:</b> We carefully review and assess our job applicants to match their skills,
             qualifications, and work ethic with your specific job requirements. Quality is our priority.
             </Typography>
-            <Typography variant='h5' color={"rgba(41,72,178,0.7)"} fontFamily={"sans-serif"}
+            <Typography variant='h5' color={"rgba(0,0,0,0.7)"} fontFamily={"sans-serif"}
             style={{
               textAlign:"left",
               // paddingLeft:"25vw",
@@ -107,7 +107,7 @@ export const Employer = () => {
             }}
             ><LabelImportantOutlinedIcon/><b> Efficiency and Speed:</b> We know that time is money. Our fast hiring process ensures you get the
             workforce you need on time, so you can keep your operations running smoothly.</Typography>
-            <Typography variant='h5' color={"rgba(41,72,178,0.7)"} fontFamily={"sans-serif"}
+            <Typography variant='h5' color={"rgba(0,0,0,0.7)"} fontFamily={"sans-serif"}
             style={{
               textAlign:"left",
               // paddingLeft:"25vw",
@@ -155,7 +155,7 @@ export const Employer = () => {
           }}
           >
             
-            <Typography color={"rgba(41,72,178,0.7)"} variant='h5' fontFamily={"sans-serif"}
+            <Typography color={"rgba(0,0,0,0.7)"} variant='h5' fontFamily={"sans-serif"}
             style={{
               paddingTop:"7vh",
               textAlign:"center",
@@ -177,7 +177,7 @@ export const Employer = () => {
               lineHeight: 1.5
             }}
             > Our commitment to quality sets us apart:</Typography> */}
-            <Typography color={"rgba(41,72,178,0.7)"} variant='h5' fontFamily={"sans-serif"}
+            <Typography color={"rgba(0,0,0,0.7)"} variant='h5' fontFamily={"sans-serif"}
             style={{
               paddingTop:"3vh",
               textAlign:"left",
@@ -189,7 +189,7 @@ export const Employer = () => {
             ><b><LabelImportantOutlinedIcon/> Trucking Professionals:</b> From long-haul truckers to local delivery drivers, we've got your
             transportation staffing covered.
             </Typography>
-            <Typography color={"rgba(41,72,178,0.7)"} variant='h5' fontFamily={"sans-serif"}
+            <Typography color={"rgba(0,0,0,0.7)"} variant='h5' fontFamily={"sans-serif"}
             style={{
               paddingTop:"3vh",
               paddingBottom:"7vh",
@@ -228,7 +228,7 @@ export const Employer = () => {
               justifyContent:"center",
               alignItems:"center"
             }}
-             variant='h3' color={"rgba(41,72,178)"} fontFamily={"serif"}
+             variant='h3' color={"rgba(0,0,0)"} fontFamily={"serif"}
             >In need of skilled professionals?</Typography>
             <Typography sx={{
               paddingTop:"2vh",
@@ -236,7 +236,7 @@ export const Employer = () => {
               justifyContent:"center",
               alignItems:"center"
             }}
-             variant='h4' color={"rgba(41,72,178)"} fontFamily={"serif"}
+             variant='h4' color={"rgba(0,0,0)"} fontFamily={"serif"}
             >Hire Dream Employment Recruitment Agency to get started</Typography>
             <Button
               style={{

@@ -82,6 +82,8 @@ export const Register = () => {
     const [reason, setReason] = useState(null);
     const loginPassword = useRef();
     const [graduate,setGraduate]=useState(false);
+    const [graduatehs,setGraduatehs]=useState(false);
+    const [agree,setAgree]=useState(false);
     
 
     const handleInputChange = (e) => {
@@ -309,16 +311,18 @@ export const Register = () => {
                 <input className='form_input' type='text' value={lastName} onChange={(e) => handleInputChange(e)} id='lastName' placeholder='Last Name'/>
             </div> */}
             <div className='name'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
+            style={{
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
+            }}
             >
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Full Name:
                 </Typography>
                 <TextField
+                    sx={{width:"25vw"}}
                     required
                     className="form_input"
                     type="text"
@@ -331,6 +335,7 @@ export const Register = () => {
                     margin="normal"
                 />
                 <TextField
+                    sx={{width:"25vw",marginLeft:"10vw"}}
                     className="form_input"
                     type="text"
                     value={lastName}
@@ -394,7 +399,7 @@ export const Register = () => {
                 </Typography>
                 <TextField
                     style={{
-                        width:"70vw"
+                        width:"35vw"
                     }}
                     className="form_input"
                     type="text"
@@ -407,7 +412,8 @@ export const Register = () => {
                 />
                 <TextField
                     style={{
-                        width:"70vw"
+                        width:"30vw",
+                        marginLeft:"5vw"
                     }}
                     className="form_input"
                     type="text"
@@ -420,7 +426,7 @@ export const Register = () => {
                 />
                 <TextField
                     style={{
-                        width:"70vw"
+                        width:"35vw"
                     }}
                     className="form_input"
                     type="text"
@@ -433,7 +439,8 @@ export const Register = () => {
                 />
                 <TextField
                     style={{
-                        width:"70vw"
+                        width:"30vw",
+                        marginLeft:"5vw"
                     }}
                     className="form_input"
                     type="text"
@@ -447,9 +454,10 @@ export const Register = () => {
             </div>
             <div className='phone_cell'
             style={{
-                display:"block",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
+                width:"80%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
             }}
             >
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
@@ -457,6 +465,7 @@ export const Register = () => {
                 </Typography>
                 
                 <TextField
+                    sx={{marginLeft:"-6vw"}}
                     className="form_input"
                     type="text"
                     value={phone}
@@ -466,31 +475,22 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                
-            </div>
-            <div className='avail_birth'
-            // style={{
-            //     paddingLeft:"5vw",
-            //     display:"inline-flex",
-            //     flexDirection:"column"
-            // }}
-            >
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{marginLeft:"5vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     Availability:
                 </Typography>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <LocalizationProvider sx={{marginLeft:"-6vw"}} dateAdapter={AdapterDayjs}>
                     <DatePicker
-                        label="Available from"
+                        label="From"
                         value={date_avail}
                         id="date_avail"
                         slotProps={{
                         textField: {
-                            helperText: 'MM/DD/YYYY',
+                            helperText: null,
                         },
                         }}
                     />
                 </LocalizationProvider>
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{marginLeft:"5vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     Date of Birth:
                 </Typography>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -500,7 +500,7 @@ export const Register = () => {
                         id="date_birth"
                         slotProps={{
                         textField: {
-                            helperText: 'MM/DD/YYYY',
+                            helperText: null,
                         },
                         }}
                     />
@@ -513,17 +513,22 @@ export const Register = () => {
         <div className='validation'>
             
             <div className='license'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
+            style={{
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
+            }}
             >
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
                     License # :
                 </Typography>
                 
                 <TextField
+                    sx={{
+                        paddingRight:"2vw",
+                        width:"20vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={licenseno}
@@ -534,10 +539,13 @@ export const Register = () => {
                     margin="normal"
                 />
                 
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{paddingLeft:"5vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     Expiry :
                 </Typography>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <LocalizationProvider sx={{
+                        width:"20vw"
+                    }}
+                 dateAdapter={AdapterDayjs}>
                 <DatePicker
                     label="Expiry Date"
                     value={date_expire}
@@ -553,10 +561,10 @@ export const Register = () => {
 
             <div className='license'
             style={{
-                marginTop:"1vh"
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
             }}
             >
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
@@ -564,6 +572,10 @@ export const Register = () => {
                 </Typography>
                 
                 <TextField
+                    sx={{
+                        paddingRight:"1.3vw",
+                        width:"15vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={licenseprov}
@@ -574,7 +586,7 @@ export const Register = () => {
                     margin="normal"
                 />
                 
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{paddingLeft:"3vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     Birth Country :
                 </Typography>
                 <TextField
@@ -1155,10 +1167,22 @@ export const Register = () => {
             //     alignItems:"center"
             // }}
             >
+                <div className='specs'
+                style={{
+                    width:"60%",
+                    display:"flex",
+                    justifyContent:"flex-start",
+                    alignItems:"center"
+                }}
+                >
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Full Name :
                 </Typography>
                 <TextField
+                    sx={{
+                        paddingRight:"2vw",
+                        width:"20vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={fullName}
@@ -1168,10 +1192,13 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{paddingLeft:"5vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     Relationship :
                 </Typography>
                 <TextField
+                    sx={{
+                        width:"20vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={relationship}
@@ -1180,18 +1207,24 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-            </div>
+                </div>
+        
             <div className='Comp_Phone'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
+            style={{
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
+            }}
             >
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Company :
                 </Typography>
                 <TextField
+                    sx={{
+                        paddingRight:"2vw",
+                        width:"20vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={companyName}
@@ -1201,10 +1234,13 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{paddingLeft:"5vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     Phone :
                 </Typography>
                 <TextField
+                    sx={{
+                        width:"20vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={companyphone}
@@ -1227,7 +1263,7 @@ export const Register = () => {
                 </Typography>
                 <TextField
                     style={{
-                        width:"70vw"
+                        width:"60vw"
                     }}
                     className="form_input"
                     type="text"
@@ -1238,6 +1274,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
+                </div>
             </div>
         </div>
         <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
@@ -1286,16 +1323,22 @@ export const Register = () => {
                 />
             </div>
             <div className='specs'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
+            style={{
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
+            }}
             >
                 <Typography color={"rgba(71,42,178)"}>
                     From :
                 </Typography>
                 <TextField
+                sx={{
+                    marginLeft:"6vw",
+                    paddingRight:"2vw",
+                    width:"15vw"
+                }}
                     className="form_input"
                     type="text"
                     value={fromschool}
@@ -1305,10 +1348,13 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"}>
+                <Typography sx={{paddingLeft:"5vw"}} color={"rgba(71,42,178)"}>
                     To :
                 </Typography>
                 <TextField
+                    sx={{
+                        marginLeft:"4.5vw",
+                    }}
                     className="form_input"
                     type="text"
                     value={toschool}
@@ -1318,7 +1364,16 @@ export const Register = () => {
                     placeholder='Enter year'
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"}>
+            </div>
+            <div className='specs'
+            style={{
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
+            }}
+            >
+                <Typography sx={{marginRight:"4vw"}} color={"rgba(71,42,178)"}>
                     Did you graduate?  
                 </Typography>
                 <FormControl>
@@ -1326,17 +1381,20 @@ export const Register = () => {
                         row
                         aria-labelledby="demo-row-radio-buttons-group-label"
                         name="row-radio-buttons-group"
-                        value={graduate}
-                        onChange={(e)=>setGraduate(e.target.value)}
+                        value={graduatehs}
+                        onChange={(e)=>setGraduatehs(e.target.value)}
                         >
                         <FormControlLabel value="yes" control={<Radio />} label="Yes" />
                         <FormControlLabel value="no" control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
-                <Typography color={"rgba(71,42,178)"}>
+                <Typography sx={{paddingLeft:"6vw"}} color={"rgba(71,42,178)"}>
                     Degree :
                 </Typography>
                 <TextField
+                    sx={{
+                        marginLeft:"3vw",
+                    }}
                     className="form_input"
                     type="text"
                     value={degree}
@@ -1389,16 +1447,22 @@ export const Register = () => {
                 />
             </div>
             <div className='specs'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
+            style={{
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
+            }}
             >
                 <Typography color={"rgba(71,42,178)"}>
                     From :
                 </Typography>
                 <TextField
+                    sx={{
+                        marginLeft:"6vw",
+                        paddingRight:"2vw",
+                        width:"15vw"
+                    }}
                     className="form_input"
                     type="text"
                     value={fromcollege}
@@ -1408,10 +1472,13 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"}>
+                <Typography sx={{paddingLeft:"5vw"}} color={"rgba(71,42,178)"}>
                     To :
                 </Typography>
                 <TextField
+                    sx={{
+                        marginLeft:"4.5vw",
+                    }}
                     className="form_input"
                     type="text"
                     value={tocollege}
@@ -1421,34 +1488,8 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"}>
-                    Did you graduate?  
-                </Typography>
-                <FormControl>
-                    <RadioGroup
-                        row
-                        aria-labelledby="demo-row-radio-buttons-group-label"
-                        name="row-radio-buttons-group"
-                    >
-                        <FormControlLabel value="yes" control={<Radio />} label="Yes" />
-                        <FormControlLabel value="no" control={<Radio />} label="No" />
-                    </RadioGroup>
-                </FormControl>
-                <Typography color={"rgba(71,42,178)"}>
-                    Degree :
-                </Typography>
-                <TextField
-                    className="form_input"
-                    type="text"
-                    value={collegedegree}
-                    onChange={(e) => handleInputChange(e)}
-                    id="collegedegree"
-                    placeholder="Specify Degree"
-                    variant="outlined"
-                    margin="normal"
-                />
             </div>
-            <div className='name_rel'
+            <div className='specs'
             style={{
                 width:"60%",
                 display:"flex",
@@ -1456,73 +1497,7 @@ export const Register = () => {
                 alignItems:"center"
             }}
             >
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
-                    Other :
-                </Typography>
-                <TextField
-                    sx={{
-                        paddingRight:"2vw",
-                        width:"25vw"
-                    }}
-                    className="form_input"
-                    type="text"
-                    value={other}
-                    onChange={(e) => handleInputChange(e)}
-                    id="other"
-                    placeholder="Others"
-                    variant="outlined"
-                    margin="normal"
-                />
-                <Typography color={"rgba(71,42,178)"} sx={{paddingLeft:"5vw"}} className="form_label" >
-                    Address :
-                </Typography>
-                <TextField
-                    style={{
-                        width:"40vw"
-                    }}
-                    className="form_input"
-                    type="text"
-                    value={otheraddress}
-                    onChange={(e) => handleInputChange(e)}
-                    id="otheraddress"
-                    variant="outlined"
-                    margin="normal"
-                />
-            </div>
-            <div className='specs'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
-            >
-                <Typography color={"rgba(71,42,178)"}>
-                    From :
-                </Typography>
-                <TextField
-                    className="form_input"
-                    type="text"
-                    value={fromother}
-                    onChange={(e) => handleInputChange(e)}
-                    id="fromother"
-                    variant="outlined"
-                    placeholder='Enter year'
-                    margin="normal"
-                />
-                <Typography color={"rgba(71,42,178)"}>
-                    To :
-                </Typography>
-                <TextField
-                    className="form_input"
-                    type="text"
-                    value={toother}
-                    onChange={(e) => handleInputChange(e)}
-                    id="toother"
-                    variant="outlined"
-                    placeholder='Enter year'
-                    margin="normal"
-                />
-                <Typography color={"rgba(71,42,178)"}>
+                <Typography sx={{marginRight:"4vw"}} color={"rgba(71,42,178)"}>
                     Did you graduate?  
                 </Typography>
                 <FormControl>
@@ -1530,91 +1505,26 @@ export const Register = () => {
                         row
                         aria-labelledby="demo-row-radio-buttons-group-label"
                         name="row-radio-buttons-group"
+                        value={graduate}
+                        onChange={(e)=>setGraduate(e.target.value)}
                     >
                         <FormControlLabel value="yes" control={<Radio />} label="Yes" />
                         <FormControlLabel value="no" control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
-                <Typography color={"rgba(71,42,178)"}>
+                <Typography sx={{paddingLeft:"6vw"}} color={"rgba(71,42,178)"}>
                     Degree :
                 </Typography>
                 <TextField
+                    sx={{
+                        marginLeft:"3vw",
+                    }}
                     className="form_input"
                     type="text"
-                    value={degreeother}
+                    value={collegedegree}
                     onChange={(e) => handleInputChange(e)}
-                    id="degreeother"
+                    id="collegedegree"
                     placeholder="Specify Degree"
-                    variant="outlined"
-                    margin="normal"
-                />
-            </div>
-        </div>
-        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
-            Agency Work Experience
-        </Typography>
-        <div className='reference'>
-            <div className='name_rel'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
-            >
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
-                    Agency Name :
-                </Typography>
-                <TextField
-                    className="form_input"
-                    type="text"
-                    value={agency}
-                    onChange={(e) => handleInputChange(e)}
-                    id="agency"
-                    variant="outlined"
-                    margin="normal"
-                />
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
-                    Pay Rate :
-                </Typography>
-                <TextField
-                    className="form_input"
-                    type="text"
-                    value={payrate}
-                    onChange={(e) => handleInputChange(e)}
-                    id="payrate"
-                    placeholder="Enter Hourly Rate"
-                    variant="outlined"
-                    margin="normal"
-                />
-            </div>
-            <div className='Comp_Phone'
-            // style={{
-            //     display:"flex",
-            //     justifyContent:"flex-start",
-            //     alignItems:"center"
-            // }}
-            >
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
-                    Company Assigned to :
-                </Typography>
-                <TextField
-                    className="form_input"
-                    type="text"
-                    value={companyassigned}
-                    onChange={(e) => handleInputChange(e)}
-                    id="companyassigned"
-                    variant="outlined"
-                    margin="normal"
-                />
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
-                    Position :
-                </Typography>
-                <TextField
-                    className="form_input"
-                    type="text"
-                    value={position}
-                    onChange={(e) => handleInputChange(e)}
-                    id="position"
                     variant="outlined"
                     margin="normal"
                 />
@@ -1783,6 +1693,13 @@ export const Register = () => {
                 
             </div>
             <div className='specs'
+            style={{
+                
+                width:"60%",
+                display:"flex",
+                justifyContent:"flex-start",
+                alignItems:"center"
+            }}
             // style={{
             //     display:"flex",
             //     justifyContent:"flex-start",
@@ -1801,7 +1718,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{marginLeft:"1vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     To :
                 </Typography>
                 <TextField
@@ -1813,10 +1730,11 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <Typography color={"rgba(71,42,178)"} className="form_label" >
+                <Typography sx={{marginLeft:"1vw"}} color={"rgba(71,42,178)"} className="form_label" >
                     Reason for leaving :
                 </Typography>
                 <TextField
+                    sx={{width:"18vw"}}
                     className="form_input"
                     type="text"
                     value={reason}
@@ -1835,6 +1753,8 @@ export const Register = () => {
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
                     name="row-radio-buttons-group"
+                    value={agree}
+                    onChange={(e)=>setAgree(e.target.value)}
                 >
                     <FormControlLabel value="yes" control={<Radio />} label="Yes" />
                     <FormControlLabel value="no" control={<Radio />} label="No" />
@@ -1857,7 +1777,7 @@ export const Register = () => {
             paddingBottom:"2vh"
         }} 
         >
-        I hereby certify that the information given on this application form and enclosures to be true and accurate, and grant Help Unlimited permission to use this information at their discretion. If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release. I acknowledge that will
+        I hereby certify that the information given on this application form and enclosures to be true and accurate, and grant Dream Employment permission to use this information at their discretion. If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release. I acknowledge that will
 deduct the cost of any ETR bill fees from my pay. This company is under the Elect to Work Policy.
         </Typography>
         <Button sx={{

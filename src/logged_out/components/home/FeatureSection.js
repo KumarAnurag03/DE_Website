@@ -142,8 +142,8 @@ function FeatureSection(props) {
           style={{
             // color:"black",
             borderColor:"blue",
-            width: "80vw",
-            height:"8vh",
+            width: "90vw",
+            height:"9vh",
             marginLeft:"5%",
             marginTop:"5%"
           }}
@@ -164,10 +164,10 @@ function FeatureSection(props) {
           style={{
             // color:"black",
             borderColor:"blue",
-            width: "80vw",
-            height:"8vh",
-            marginTop:"2%",
-            marginLeft:"15%"
+            width: "90vw",
+            height:"9vh",
+            marginTop:"5%",
+            marginLeft:"5%"
           }}
           variant="outlined"
           sx={{

@@ -6,7 +6,7 @@ import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useWidth from "../../../shared/functions/useWidth";
-import Logo from '../../../images/Logo.png'
+import Logo from '../../../images/Studio-Project_2-removebg-preview.png'
 import "./PricingSection.css"
 
 const styles = (theme) => ({

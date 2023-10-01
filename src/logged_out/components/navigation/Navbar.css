@@ -1,9 +1,8 @@
 .logo{
-    height: 18vh;
-    /* max-width: 200%; */
-    width: 18vw;
+    height: 25vh;
+    max-width: 200%;
+    /* width: 20vw; */
     margin: -20%;
-    padding-top:8%;
-    padding-bottom: 11%;
-    padding-left: 8%;
+    padding-top:6%;
+    padding-left: 5%;
 }

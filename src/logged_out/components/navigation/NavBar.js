@@ -11,13 +11,14 @@ import BookIcon from "@mui/icons-material/Book";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import CallIcon from '@mui/icons-material/Call';
 import Logo from '../../../images/Logo.png';
-import  Newlogo  from "../../../images/Studio-Project 2.jpg";
+import  Newlogo  from "../../../images/Studio-Project_2-removebg-preview.png";
 import './Navbar.css'
 import { useStateValue } from "../../../MyContexts/StateProvider";
 import { auth } from "../../../firebase";
 
 const styles = theme => ({
   appBar: {
+    textColor: theme.palette.common.black,
     boxShadow: theme.shadows[6],
     backgroundColor: theme.palette.common.white
   },

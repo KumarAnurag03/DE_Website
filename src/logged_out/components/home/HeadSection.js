@@ -74,11 +74,13 @@ const styles = (theme) => ({
     boxShadow: theme.shadows[4],
   },
   container: {
-    backgroundColor:"rgba(255,255,255,0.4)",
+    backgroundColor:"rgba(0,0,0,0.7)",
+    paddingLeft:"7vw",
+    paddingRight:"7vw",
     borderRadius:"20px",
-    paddingBottom:"2px",
+    paddingBottom:"2vh",
     // opacity:"1",
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(10),
     marginBottom: theme.spacing(20),
     [theme.breakpoints.down("lg")]: {
       marginBottom: theme.spacing(30),
@@ -108,21 +110,19 @@ function HeadSection(props) {
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container)}>
-          <Typography variant="h3" fontFamily={"serif"} display={"inline"} >At </Typography>
-          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
-          <Typography variant="h1" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
-          <Typography variant="h3" fontFamily={"serif"}
+          <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(255,255,255)"}>At </Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
+          <Typography variant="h4" color={"rgba(255,255,255)"} fontFamily={"serif"}
           sx={{
             paddingBottom:"8px"
           }}
-          >Our mission is clear : </Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"}>Navigating</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,1)"}> Dreams</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"}> to Real Opportunities. We specialize in connecting businesses with</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,1)"}> skilled professionals</Typography>
-          <Typography variant="h2" fontFamily={"serif"} display={"inline"}> who can drive success on the road and within the warehouse.</Typography>
+          >Our mission is clear : "Navigating Dreams to Real Opportunities"</Typography>
+          <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(255,255,255)"}> We specialize in connecting businesses with skilled professionals</Typography>
+          <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(255,255,255)"}> who can drive success on the road and within the warehouse.Our staffing solutions are adaptable to your business needs, offering temporary, temp-to-
+perm, and permanent options.</Typography>
           {/* <Box display="flex" justifyContent="center" className="row">
             <Card
               className={classes.card}

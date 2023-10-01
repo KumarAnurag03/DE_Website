@@ -4,3 +4,15 @@
     align-items:center;
     margin-bottom:-10%;
 }
+
+@media only screen and (max-width:600px) {
+    .logo_large{
+        /* display:flex;
+    justify-content:center;
+    align-items:center; */
+    overflow-x: auto;
+    padding-left: 50vw;
+    width: 380px;
+    height: 400px;
+    }
+}
