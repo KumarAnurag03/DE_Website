@@ -93,14 +93,14 @@ export const JobCard = ({jd,jobtype,location,rate,time,status,id}) => {
                 display:'block',
             }}
             >
-                <Typography variant='h5'
+                <Typography fontFamily={"serif"} variant='h5'
                 sx={{
                     m:1
                 }}
                 >
                    <b>{jobtype}</b>
                 </Typography>
-                <Typography variant='h7'
+                <Typography fontFamily={"serif"} variant='h7'
                 sx={{
                     m: 1,
                     display:'block'

@@ -7,13 +7,13 @@ import withStyles from "@mui/styles/withStyles";
 // import WaveBorder from "../../../shared/components/WaveBorder";
 // import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Fork from "../../images/fork.jpg";
 import Drive from '../../images/drive.jpg'
+import Stair from "../../images/job-seek.jpg";
 // import './HeadSection.css'
 import WaveBorder from "../../shared/components/WaveBorder";
 import './JobSeekers.css'
 import { useStateValue } from "../../MyContexts/StateProvider";
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 
 const styles = (theme) => ({
   extraLargeButtonLabel: {
@@ -67,7 +67,7 @@ const styles = (theme) => ({
   wrapper: {
     backgroundPosition: "relative",
     // backgroundImage:"url('https://cdn.pixabay.com/photo/2017/10/31/09/55/dream-job-2904780_1280.jpg')",
-    backgroundImage:`url(${Drive})`,
+    backgroundImage:`url(${Stair})`,
     backgroundSize:"cover",
     // backgroundColor: theme.palette.secondary.main,
     backgroundRepeat: "no-repeat",
@@ -82,11 +82,12 @@ const styles = (theme) => ({
   container: {
     backgroundColor:"rgba(255,255,255,0.4)",
     borderRadius:"20px",
-    paddingBottom:"3vh",
+    paddingTop:"5vh",
+    paddingBottom:"5vh",
     paddingLeft:"6vw",
     paddingRight:"4vw",
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(20),
+    marginTop: theme.spacing(6),
+    marginBottom: theme.spacing(15),
     [theme.breakpoints.down("lg")]: {
       marginBottom: theme.spacing(30),
     },
@@ -131,11 +132,11 @@ function HeadSection(props) {
     <Fragment>
       <div className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container,"picture")}>
-          <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(0,0,0)"}>At </Typography>
+          {/* <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(0,0,0)"}>At </Typography>
           <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
           <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
           <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
-          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography> */}
           <Typography variant="h4" color={"rgba(0,0,0)"} fontFamily={"serif"}
           >
             We understand that the journey to finding your ideal job can be both exciting and challenging. That's
@@ -288,7 +289,28 @@ reach, and we're here to help you seize it. Join us on this path to success!
           }}
           onClick={handleClick}
         >
-          AVAILABLE OPPORTUNITIES : APPLY NOW
+          AVAILABLE OPPORTUNITIES
+        </Button>
+
+        <Button
+          style={{
+          // color:"blue",
+          borderColor:"blue",
+          width: "90vw",
+          height: "10vh",
+          marginTop:"5%",
+          marginLeft:"5%"
+          }}
+          variant="outlined"
+          sx={{
+          ":hover":{
+              bgcolor:"#00008b !important",
+              color:"#FFF"
+          }
+          }}
+          onClick={handleClick}
+        >
+          APPLY NOW
         </Button>
 
     </Fragment>

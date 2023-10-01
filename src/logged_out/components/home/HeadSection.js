@@ -6,7 +6,7 @@ import withStyles from "@mui/styles/withStyles";
 import WaveBorder from "../../../shared/components/WaveBorder";
 import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Truck from '../../../images/Truck.jpg'
+import Com from "../../../images/Home-image.webp";
 import './HeadSection.css'
 
 const styles = (theme) => ({
@@ -59,8 +59,9 @@ const styles = (theme) => ({
     },
   },
   wrapper: {
-    position: "relative",
-    backgroundImage:"url('https://www.jobsintrucks.com/img/rwd-jit/hero1.jpg')",
+    // position: "relative",
+    // backgroundImage:"url('https://www.jobsintrucks.com/img/rwd-jit/hero1.jpg')",
+    backgroundImage:`url(${Com})`,
     // backgroundColor: theme.pal ette.secondary.main,
     // backgroundColor:"rgba(0,255,0,0.5)",
     backgroundRepeat: "no-repeat",
@@ -76,12 +77,13 @@ const styles = (theme) => ({
   container: {
     backgroundColor:"rgba(0,0,0,0.7)",
     paddingLeft:"7vw",
+    paddingTop:"12vh",
     paddingRight:"7vw",
     borderRadius:"20px",
-    paddingBottom:"2vh",
+    paddingBottom:"12vh",
     // opacity:"1",
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(20),
+    marginTop: theme.spacing(6),
+    marginBottom: theme.spacing(15),
     [theme.breakpoints.down("lg")]: {
       marginBottom: theme.spacing(30),
     },
@@ -111,15 +113,15 @@ function HeadSection(props) {
       <div className={classNames("lg-p-top", classes.wrapper)}>
         <div className={classNames("container-fluid", classes.container)}>
           <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(255,255,255)"}>At </Typography>
-          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
-          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
-          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
-          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography>
-          <Typography variant="h4" color={"rgba(255,255,255)"} fontFamily={"serif"}
+          <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(0, 255, 255,0.7)"}>Dream Emploment, </Typography>
+          {/* <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(0, 255, 255,0.7)"}>ream </Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(0, 255, 255,0.7)"}>E</Typography>
+          <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(0, 255, 255,0.7)"}>mployment,</Typography> */}
+          <Typography variant="h4" color={"rgba(255,255,255)"} fontFamily={"serif"} display={"inline"}
           sx={{
             paddingBottom:"8px"
           }}
-          >Our mission is clear : "Navigating Dreams to Real Opportunities"</Typography>
+          >Our mission is clear : " Navigating Dreams to Real Opportunities "</Typography>
           <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(255,255,255)"}> We specialize in connecting businesses with skilled professionals</Typography>
           <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(255,255,255)"}> who can drive success on the road and within the warehouse.Our staffing solutions are adaptable to your business needs, offering temporary, temp-to-
 perm, and permanent options.</Typography>

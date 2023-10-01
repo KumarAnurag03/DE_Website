@@ -12,15 +12,15 @@ import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import CallIcon from '@mui/icons-material/Call';
 import Logo from '../../../images/Logo.png';
 import  Newlogo  from "../../../images/Studio-Project_2-removebg-preview.png";
+import Finlogo from "../../../images/final-logo.png";
 import './Navbar.css'
 import { useStateValue } from "../../../MyContexts/StateProvider";
 import { auth } from "../../../firebase";
 
 const styles = theme => ({
   appBar: {
-    textColor: theme.palette.common.black,
     boxShadow: theme.shadows[6],
-    backgroundColor: theme.palette.common.white
+    backgroundColor: theme.palette.common.black
   },
   toolbar: {
     display: "flex",
@@ -99,7 +99,7 @@ function NavBar(props) {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <div>
-            <img className='logo' src={Newlogo} alt="" />
+            <img className='logo' src={Finlogo} alt="" />
             {/* <Typography
               variant="h4"
               className={classes.brandText}

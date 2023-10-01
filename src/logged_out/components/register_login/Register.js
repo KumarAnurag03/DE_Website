@@ -301,7 +301,7 @@ export const Register = () => {
             marginTop: "13vh"
         }}
         ></div>
-        <Typography color={"rgba(71,42,178)"} fontFamily={"serif"} variant="h3">
+        <Typography color={"rgba(71,42,178)"} fontFamily={"serif"} variant="h4">
             Personal Information
         </Typography>
         <div className='personal-form-body'>
@@ -321,9 +321,8 @@ export const Register = () => {
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Full Name:
                 </Typography>
-                <TextField
+                <TextField required
                     sx={{width:"25vw"}}
-                    required
                     className="form_input"
                     type="text"
                     value={firstName}
@@ -334,7 +333,7 @@ export const Register = () => {
                     variant="outlined"
                     margin="normal"
                 />
-                <TextField
+                <TextField required
                     sx={{width:"25vw",marginLeft:"10vw"}}
                     className="form_input"
                     type="text"
@@ -373,7 +372,7 @@ export const Register = () => {
                 <Typography color={"rgba(71,42,178)"} className="form_label" >
                     Email-ID:
                 </Typography>
-                <TextField
+                <TextField required
                     style={{
                         width:"70vw"
                     }}
@@ -465,6 +464,7 @@ export const Register = () => {
                 </Typography>
                 
                 <TextField
+                    required
                     sx={{marginLeft:"-6vw"}}
                     className="form_input"
                     type="text"
@@ -507,7 +507,7 @@ export const Register = () => {
                 </LocalizationProvider>
             </div>
         </div>
-        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
+        <Typography color={"rgba(71,42,178)"} variant="h4" fontFamily={"serif"}>
             Truck Driver validation 
         </Typography>
         <div className='validation'>

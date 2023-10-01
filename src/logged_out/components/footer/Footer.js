@@ -100,7 +100,7 @@ const socialIcons = [
       </svg>
     ),
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/profile.php?id=61551892895588&mibextid=LQQJ4d",
   },
   {
     icon: (
@@ -116,7 +116,7 @@ const socialIcons = [
       </svg>
     ),
     label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/dreamempoyment/",
   },
   {
     icon: (
@@ -132,7 +132,7 @@ const socialIcons = [
       </svg>
     ),
     label: "Twitter",
-    href: "https://www.instagram.com/",
+    href: "https://instagram.com/dreamemployment.ca?igshid=OGQ5ZDc2ODk2ZA==",
   },
 ];
 

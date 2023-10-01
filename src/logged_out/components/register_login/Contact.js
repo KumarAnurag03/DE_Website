@@ -31,14 +31,14 @@ export const Contact = () => {
         flexDirection:"column",
         justifyContent:"center",
         alignItems:"center",
-        marginTop:"12vh",
+        marginTop:"6vh",
         marginBottom:"2vh"
         // padding:"100px 50px"
       }}
       >
-        <Typography variant='h2' fontFamily={"serif"} color={"rgba(0,0,0,1)"}>
+        {/* <Typography variant='h2' fontFamily={"serif"} color={"rgba(0,0,0,1)"}>
           Contact us to get Listed
-        </Typography>
+        </Typography> */}
         {/* <Typography variant='h4'
         style={{
           display:"flex",
@@ -176,8 +176,9 @@ export const Contact = () => {
           alignItems:"start"
         }}
         >
-          <Grid item xs={12} md={6}
+          <Grid item xs={12} md={11}
           style={{
+            borderRadius:"10px",
           backgroundColor:"rgba(0,0,0,0.8)",
           paddingTop:"1vh",
           paddingBottom:"2vh",
@@ -187,11 +188,70 @@ export const Contact = () => {
           marginBottom:"25vh"
         }}
         >
-        <Typography color={"rgba(255,255,255)"} variant='h3' fontFamily={"serif "}>Ready to streamline your staffing process?</Typography>
-        <Typography color={"rgba(255,255,255)"} variant='h3' fontFamily={"serif "}> Contact us today to discuss your trucking and industrial
+        <Typography
+        style={{
+          paddingTop:"2vh",
+          textAlign:"center",
+          paddingLeft:"5vw",
+          paddingRight:"5vw",
+          letterSpacing: 1,
+          lineHeight: 1.5
+        }}
+         color={"rgba(255,255,255)"} variant='h4' fontFamily={"serif "}>Ready to optimize your staffing process?</Typography>
+        <Typography
+        style={{
+          // paddingTop:"2vh",
+          textAlign:"center",
+          paddingLeft:"5vw",
+          paddingRight:"5vw",
+          letterSpacing: 1,
+          lineHeight: 1.5
+        }}
+         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}> Contact us today to discuss your trucking and industrial
           staffing needs. Let's drive success together!</Typography>
+        <Typography
+        style={{
+          paddingTop:"4vh",
+          textAlign:"center",
+          paddingLeft:"5vw",
+          paddingRight:"5vw",
+          letterSpacing: 1,
+          lineHeight: 1.5
+        }}
+         color={"rgba(255,255,255)"} variant='h4' fontFamily={"serif "}>Reach Out</Typography>
+         <Typography
+        style={{
+          // paddingTop:"2vh",
+          textAlign:"center",
+          paddingLeft:"5vw",
+          paddingRight:"5vw",
+          letterSpacing: 1,
+          lineHeight: 1.5
+        }}
+         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}>Phone: 647-327-4487</Typography>
+         <Typography
+        style={{
+          // paddingTop:"2vh",
+          textAlign:"center",
+          paddingLeft:"5vw",
+          paddingRight:"5vw",
+          letterSpacing: 1,
+          lineHeight: 1.5
+        }}
+         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}>Email: info@Dreamemployment.ca</Typography>
+        <Typography
+        style={{
+          paddingTop:"4vh",
+          textAlign:"center",
+          paddingBottom:"2vh",
+          paddingLeft:"5vw",
+          paddingRight:"5vw",
+          letterSpacing: 1,
+          lineHeight: 1.5
+        }}
+         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}>We're here to help you navigate your staffing needs and drive toward greater success.</Typography>
        </Grid>
-       <Grid item xs={12} md={6}
+       {/* <Grid item xs={12} md={6}
           style={{
           backgroundColor:"rgba(0,0,0,0.8)",
           // height:"42.3vh",
@@ -211,7 +271,7 @@ export const Contact = () => {
         <Typography variant='h3' fontFamily={"serif "} style={{paddingBottom:"20px"}} color={"rgba(255,255,255,1)"} >647-327-4487</Typography>
         <Typography variant='h3' fontFamily={"serif "} style={{paddingBottom:"20px"}} color={"rgba(255,255,255,1)"} >Email At</Typography>
         <Typography variant='h3' fontFamily={"serif"} style={{paddingBottom:"20px"}} color={"rgba(255,255,255,1)"}>info@Dreamemployment.ca</Typography>
-       </Grid>
+       </Grid> */}
 
       </Grid>
       </Box>

@@ -43,7 +43,7 @@ export const JobListing = ({openLoginDialog}) => {
             alignItems:"center"
         }}
         >
-            Job Listings
+            Explore and apply to the Jobs
         </Typography>
       {
         jobList.empty?<>There are no job opportunities right now. Please visit later.</>:
