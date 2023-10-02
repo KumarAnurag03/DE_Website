@@ -140,9 +140,9 @@ export const JobCard = ({jd,jobtype,location,rate,time,status,id}) => {
                         <Button onClick={handleDelete}>
                             Delete
                         </Button>
-                        <Button onClick={handleShow}>
+                        {/* <Button onClick={handleShow}>
                             Show Applications
-                        </Button>
+                        </Button> */}
                     </>
                         :
                         <Button onClick={handleApply}>
