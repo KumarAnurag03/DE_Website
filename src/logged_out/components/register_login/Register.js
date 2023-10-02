@@ -248,6 +248,20 @@ export const Register = () => {
 
     }
 
+    const [availableTimes,setAvailableTimes]=useState({
+        "Monday":false,"Tuesday":false,"Wednesday":false,"Thursday":false,"Friday":false,"Saturday":false,"Sunday":false
+    })
+    useEffect(()=>{
+        console.log(availableTimes);
+    },[availableTimes])
+    const handleAvailableTimesChange=(e)=>{
+        const {name,checked}=e.target;
+        setAvailableTimes((prevValue)=>({
+            ...prevValue,
+            [name]:checked
+        }))
+    }
+
     const signUp=(e)=>{
         e.preventDefault();
         // console.log(email,firstName,lastName);
@@ -276,11 +290,10 @@ export const Register = () => {
                 let newList=doc.data().list;
                 console.log("newlist: ",newList);
                 newList.push({
-                    firstName,
-                    email,lastName,address,city,province,landmark,
+                    firstName,email,lastName,address,city,province,landmark,
                     graduate,degree,degreeother,phone,date_avail,date_birth,date_expire,
                     licenseno,licenseprov,relationship,prevcompany,prevaddress,prevphone
-                    ,jobtitle,responsibility,reason,agency,payrate
+                    ,jobtitle,responsibility,reason,agency,payrate,availableTimes
                 })
 
                 db.collection('Listings').doc(jobid).set({
@@ -293,6 +306,8 @@ export const Register = () => {
         }
 
     }
+
+    
 
   return (
     <div>
@@ -617,46 +632,67 @@ export const Register = () => {
             <FormControl component="fieldset">
                 <FormGroup  aria-label="position" row>
                     <FormControlLabel
-                    value="monday"
+                    value="Monday"
                     control={<Checkbox />}
                     label="Monday"
                     labelPlacement="end"
+                    checked={availableTimes.Monday}
+                    name="Monday"
+                    onChange={handleAvailableTimesChange}
                     />
                     <FormControlLabel
-                    value="tuesday"
+                    value="Tuesday"
                     control={<Checkbox />}
                     label="Tuesday"
                     labelPlacement="end"
+                    checked={availableTimes.Tuesday}
+                    name="Tuesday"
+                    onChange={handleAvailableTimesChange}
                     />
                     <FormControlLabel
-                    value="wednesday"
+                    value="Wednesday"
                     control={<Checkbox />}
                     label="Wednesday"
                     labelPlacement="end"
+                    checked={availableTimes.Wednesday}
+                    name="Wednesday"
+                    onChange={handleAvailableTimesChange}
                     />
                     <FormControlLabel
-                    value="thursday"
+                    value="Thursday"
                     control={<Checkbox />}
                     label="Thursday"
                     labelPlacement="end"
+                    checked={availableTimes.Thursday}
+                    name="Thursday"
+                    onChange={handleAvailableTimesChange}
                     />
                     <FormControlLabel
-                    value="friday"
+                    value="Friday"
                     control={<Checkbox />}
                     label="Friday"
                     labelPlacement="end"
+                    checked={availableTimes.Friday}
+                    name="Friday"
+                    onChange={handleAvailableTimesChange}
                     />
                     <FormControlLabel
-                    value="saturday"
+                    value="Saturday"
                     control={<Checkbox />}
                     label="Saturday"
                     labelPlacement="end"
+                    checked={availableTimes.Saturday}
+                    name="Saturday"
+                    onChange={handleAvailableTimesChange}
                     />
                     <FormControlLabel
-                    value="sunday"
+                    value="Sunday"
                     control={<Checkbox />}
                     label="Sunday"
                     labelPlacement="end"
+                    checked={availableTimes.Sunday}
+                    name="Sunday"
+                    onChange={handleAvailableTimesChange}
                     />
                 </FormGroup>
             </FormControl>
