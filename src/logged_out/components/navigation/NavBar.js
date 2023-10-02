@@ -69,7 +69,7 @@ function NavBar(props) {
     },
     {
       link: "/job_seekers",
-      name: "Job Seekers: Get Hired",
+      name: "Job Seekers: Apply Now",
       icon: <BookIcon className="text-white" />
     },
     {

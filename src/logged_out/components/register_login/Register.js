@@ -38,6 +38,7 @@ export const Register = () => {
     const [city, setCity] = useState(null);
     const [province, setProvince] = useState(null);
     const [phone, setPhone] = useState(null);
+    const [sin, setSin] = useState(null);
     const [landmark, setLandmark] = useState(null);
     const [date_avail, setDate_avail] = useState(null);
     const [date_birth, setDate_birth] = useState(null);
@@ -105,6 +106,9 @@ export const Register = () => {
         }
         if(id === "toprev"){
             setToprev(value);
+        }
+        if(id === "sin"){
+            setSin(value);
         }
         if(id === "reason"){
             setReason(value);
@@ -221,11 +225,11 @@ export const Register = () => {
         {
             setEmail(value);
         }
-        if(id === "address")
+        if(id === "appartment")
         {
             setAddress(value);
         }
-        if(id === "landmark")
+        if(id === "street")
         {
             setLandmark(value);
         }
@@ -276,8 +280,8 @@ export const Register = () => {
                 let newList=doc.data().list;
                 console.log("newlist: ",newList);
                 newList.push({
-                    firstName,
-                    email,lastName,address,city,province,landmark,
+                    firstName,sin,
+                    email,lastName,address,city,province,landmark,graduatehs,
                     graduate,degree,degreeother,phone,date_avail,date_birth,date_expire,
                     licenseno,licenseprov,relationship,prevcompany,prevaddress,prevphone
                     ,jobtitle,responsibility,reason,agency,payrate
@@ -334,13 +338,28 @@ export const Register = () => {
                     margin="normal"
                 />
                 <TextField required
-                    sx={{width:"25vw",marginLeft:"10vw"}}
+                    sx={{width:"25vw",marginLeft:"3vw"}}
                     className="form_input"
                     type="text"
                     value={lastName}
                     onChange={(e) => handleInputChange(e)}
                     id="lastName"
                     placeholder="Last Name"
+                    variant="outlined"
+                    margin="normal"
+                />
+                <Typography sx={{marginLeft:"5vw"}} color={"rgba(71,42,178)"} className="form_label" >
+                    SIN Number:
+                </Typography>
+                <TextField
+                    required
+                    sx={{width:"30vw"}}
+                    className="form_input"
+                    type="text"
+                    value={sin}
+                    onChange={(e) => handleInputChange(e)}
+                    id="sin"
+                    placeholder="SIN Number"
                     variant="outlined"
                     margin="normal"
                 />
@@ -602,7 +621,7 @@ export const Register = () => {
                 
             </div>
         </div>
-        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
+        <Typography color={"rgba(71,42,178)"} variant="h4" fontFamily={"serif"}>
             Work Experience
         </Typography>
         <div style={{
@@ -741,31 +760,6 @@ export const Register = () => {
                 </FormGroup>
             </FormControl>
             <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
-                G Class Driver
-            </Typography>
-            <FormControl component="fieldset">
-                <FormGroup aria-label="position" row>
-                    <FormControlLabel
-                    value="monday"
-                    control={<Checkbox />}
-                    label="Pick-Up"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="tuesday"
-                    control={<Checkbox />}
-                    label="5 Ton"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="wednesday"
-                    control={<Checkbox />}
-                    label="Cube Van"
-                    labelPlacement="end"
-                    />
-                </FormGroup>
-            </FormControl>
-            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
                 General Labour
             </Typography>
             <FormControl component="fieldset">
@@ -797,171 +791,700 @@ export const Register = () => {
                 </FormGroup>
             </FormControl>
             <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
-                Hospitality
+                G Class Driver
             </Typography>
             <FormControl component="fieldset">
                 <FormGroup aria-label="position" row>
                     <FormControlLabel
                     value="monday"
                     control={<Checkbox />}
-                    label="Server"
+                    label="Pick-Up"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="tuesday"
                     control={<Checkbox />}
-                    label="Bar Back"
+                    label="5 Ton"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="wednesday"
                     control={<Checkbox />}
-                    label="Bartender"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="thursday"
-                    control={<Checkbox />}
-                    label="Wine Steward"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="friday"
-                    control={<Checkbox />}
-                    label="Kitchen Prep"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="saturday"
-                    control={<Checkbox />}
-                    label="Cook"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Chef"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Dishwasher"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Dish Steward"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Porter"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Houseman"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Hostess"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Doorman"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Banquet Supervisor"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Banquet Attendant"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Laundry Attendant"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Parking Attendant"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                    value="sunday"
-                    control={<Checkbox />}
-                    label="Coat Check"
+                    label="Cube Van"
                     labelPlacement="end"
                     />
                 </FormGroup>
             </FormControl>
             <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
-                Hospitality Clients
+                AZ Driver
             </Typography>
             <FormControl component="fieldset">
                 <FormGroup aria-label="position" row>
                     <FormControlLabel
                     value="monday"
                     control={<Checkbox />}
-                    label="Hotel"
+                    label="AZ Driver"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="tuesday"
                     control={<Checkbox />}
-                    label="Golf Club"
+                    label="Fast Card"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="wednesday"
                     control={<Checkbox />}
-                    label="Conference Centre"
+                    label="Highway CDN"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="thursday"
                     control={<Checkbox />}
-                    label="Banquets"
+                    label="Highway USA"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="friday"
                     control={<Checkbox />}
-                    label="Corporate"
+                    label="Local"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="saturday"
                     control={<Checkbox />}
-                    label="Fast Food"
+                    label="Mountains"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="sunday"
                     control={<Checkbox />}
-                    label="Catering Companies"
+                    label="Northern Switches"
                     labelPlacement="end"
                     />
                     <FormControlLabel
                     value="sunday"
                     control={<Checkbox />}
-                    label="Restaurant"
+                    label="Switches"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Forklift"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Handbombing OK"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Day Cab"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tandem"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tri-Axle"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Shunting-Daycab"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Shunting-Ottawa"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Shunting-Capacity"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="10 Speed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="13 Speed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="15 Speed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="18 Speed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="6 Speed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Automatic"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Bunk Truck"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Dump Trailers"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Split Shift"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Dry Van"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="ladders"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Luggar"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Over Size"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Pumps"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Reefers"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Curtain Sides"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Drop Deck"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Flat Bed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Ropes and Tarps"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Boom"
+                    labelPlacement="end"
+                    />
+                    valid<FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="HI-AB"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Lumber"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Steel"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Moffat"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Containers"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Super Van"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Dry Bulk"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tankers"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="A Trains"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="B Trains"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tailgate"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Waste"
+                    labelPlacement="end"
+                    />
+                    
+                </FormGroup>
+            </FormControl>
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
+                AZ Driver Experience
+            </Typography>
+            <FormControl component="fieldset">
+                <FormGroup aria-label="position" row>
+                    <FormControlLabel
+                    value="monday"
+                    control={<Checkbox />}
+                    label="Under 1 year"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="tuesday"
+                    control={<Checkbox />}
+                    label="Over 1 year"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="wednesday"
+                    control={<Checkbox />}
+                    label="CoOver 2 years"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="thursday"
+                    control={<Checkbox />}
+                    label="Over 3 years"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="friday"
+                    control={<Checkbox />}
+                    label="Over 5 years"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="saturday"
+                    control={<Checkbox />}
+                    label="Over 10 years"
+                    labelPlacement="end"
+                    />
+                </FormGroup>
+            </FormControl>
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
+                Driver Documentation
+            </Typography>
+            <FormControl component="fieldset">
+                <FormGroup aria-label="position" row>
+                    <FormControlLabel
+                    value="monday"
+                    control={<Checkbox />}
+                    label="Drivers Abstract"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="tuesday"
+                    control={<Checkbox />}
+                    label="CVOR Abstract"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="wednesday"
+                    control={<Checkbox />}
+                    label="Criminal Record Check"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="thursday"
+                    control={<Checkbox />}
+                    label="Dangerous Goods"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="friday"
+                    control={<Checkbox />}
+                    label="WHMIS"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="saturday"
+                    control={<Checkbox />}
+                    label="FAST Card"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="saturday"
+                    control={<Checkbox />}
+                    label="Drivers Licence"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="saturday"
+                    control={<Checkbox />}
+                    label="Drivers Licence Expiry"
+                    labelPlacement="end"
+                    />
+                    
+                </FormGroup>
+            </FormControl>
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
+                DZ Driver
+            </Typography>
+            <FormControl component="fieldset">
+                <FormGroup aria-label="position" row>
+                <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="DZ Driver"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tandem"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tri-Axle Dump"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Forklift"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Residential Recycling"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Local"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="10 Speed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Residential Waste"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Highway CDN"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Yard Waste"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Highway USA"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Automatic"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Side Loading 1 man"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Dry Van"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Front End Loader"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Dry Van"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Rear Packing 2 Man"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Luggar"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Roll Off"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Manual Transmission"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Reefers"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Curtain Sides"
+                    labelPlacement="end"
+                    />
+                    {/* <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Drop Deck"
+                    labelPlacement="end"
+                    /> */}
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Flat Bed"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Ropes and Tarps"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Boom"
+                    labelPlacement="end"
+                    />
+                    valid<FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="HI-AB"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Lumber"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Steel"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Moffat"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Containers"
+                    labelPlacement="end"
+                    />
+                    {/* <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Super Van"
+                    labelPlacement="end"
+                    /> */}
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Dry Bulk"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tankers"
+                    labelPlacement="end"
+                    />
+                    {/* <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="A Trains"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="B Trains"
+                    labelPlacement="end"
+                    /> */}
+                    <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Tailgate"
+                    labelPlacement="end"
+                    />
+                    {/* <FormControlLabel
+                    value="sunday"
+                    control={<Checkbox />}
+                    label="Waste"
+                    labelPlacement="end"
+                    /> */}
+                    
+                </FormGroup>
+            </FormControl>
+            <Typography color={"rgba(71,42,178)"} variant="h5" fontFamily={"serif"}>
+                DZ Driver Experience
+            </Typography>
+            <FormControl component="fieldset">
+                <FormGroup aria-label="position" row>
+                    <FormControlLabel
+                    value="monday"
+                    control={<Checkbox />}
+                    label="Under 1 year"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="tuesday"
+                    control={<Checkbox />}
+                    label="Over 1 year"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="wednesday"
+                    control={<Checkbox />}
+                    label="CoOver 2 years"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="thursday"
+                    control={<Checkbox />}
+                    label="Over 3 years"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="friday"
+                    control={<Checkbox />}
+                    label="Over 5 years"
+                    labelPlacement="end"
+                    />
+                    <FormControlLabel
+                    value="saturday"
+                    control={<Checkbox />}
+                    label="Over 10 years"
                     labelPlacement="end"
                     />
                 </FormGroup>
@@ -1153,7 +1676,7 @@ export const Register = () => {
                 </FormGroup>
             </FormControl>
         </div>
-        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
+        <Typography color={"rgba(71,42,178)"} variant="h4" fontFamily={"serif"}>
             References
         </Typography>
         <div className='reference'>
@@ -1277,7 +1800,7 @@ export const Register = () => {
                 </div>
             </div>
         </div>
-        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
+        <Typography color={"rgba(71,42,178)"} variant="h4" fontFamily={"serif"}>
             Education
         </Typography>
         <div className='education'>
@@ -1530,7 +2053,7 @@ export const Register = () => {
                 />
             </div>
         </div>
-        <Typography color={"rgba(71,42,178)"} variant="h3" fontFamily={"serif"}>
+        <Typography color={"rgba(71,42,178)"} variant="h4" fontFamily={"serif"}>
             Previous Employment
         </Typography>
         <div className='prev_Emp'>

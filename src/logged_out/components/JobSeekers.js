@@ -125,7 +125,7 @@ function HeadSection(props) {
     history.push('/joblistings')
   }
   const handleClickcon=()=>{
-    history.push('/contact')
+    history.push('/register/01')
   }
 
   return (
@@ -308,7 +308,7 @@ reach, and we're here to help you seize it. Join us on this path to success!
               color:"#FFF"
           }
           }}
-          onClick={handleClick}
+          onClick={handleClickcon}
         >
           APPLY NOW
         </Button>

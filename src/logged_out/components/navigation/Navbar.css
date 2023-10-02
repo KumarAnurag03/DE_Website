@@ -6,3 +6,11 @@
     /* padding-top:6%; */
     padding-left: 5%;
 }
+
+@media screen and (max-width:600px) {
+    .logo{
+        padding-top: 5%;
+        max-width: 120%;
+    }
+    
+}
