@@ -716,7 +716,7 @@ export const Register = () => {
                 
                 <TextField
                     required
-                    sx={{marginLeft:"-6vw"}}
+                    sx={{marginLeft:"0vw"}}
                     className="form_input"
                     type="text"
                     value={phone}
@@ -2978,7 +2978,7 @@ export const Register = () => {
                 alignItems:"center"
             }}
             >
-                <Typography color={"rgba(71,42,178)"} sx={{marginRight:"-18vw"}} className="form_label">
+                <Typography color={"rgba(71,42,178)"} sx={{marginRight:"-8vw"}} className="form_label">
                     Responsibilities :
                 </Typography>
                 <TextField

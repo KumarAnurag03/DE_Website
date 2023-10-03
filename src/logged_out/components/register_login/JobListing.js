@@ -36,7 +36,23 @@ export const JobListing = ({openLoginDialog}) => {
       marginTop:"15vh"
     }}
     >
-      <Typography color={"rgba(71,42,178)"} variant='h3' fontFamily={"serif"}
+      
+      {
+        jobList.length==0?<>
+        
+        <Typography color={"rgba(71,42,178)"} variant='h3' fontFamily={"serif"}
+        sx={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+        }}
+        >
+            There are no job opportunities right now. Please visit later.
+        </Typography>
+        </>:
+        <>
+          
+          <Typography color={"rgba(71,42,178)"} variant='h3' fontFamily={"serif"}
         sx={{
             display:"flex",
             justifyContent:"center",
@@ -45,19 +61,19 @@ export const JobListing = ({openLoginDialog}) => {
         >
             Explore and apply to the Jobs
         </Typography>
-      {
-        jobList.empty?<>There are no job opportunities right now. Please visit later.</>:
-        jobList.map(job=>(
-          <JobCard
-            jd={job.jd}
-            jobtype={job.jobtype}
-            location={job.location}
-            rate={job.rate}
-            time={job.createdAt}
-            status="user"
-            id={job.id}
-          />
-        ))
+
+          {jobList.map(job=>(
+            <JobCard
+              jd={job.jd}
+              jobtype={job.jobtype}
+              location={job.location}
+              rate={job.rate}
+              time={job.createdAt}
+              status="user"
+              id={job.id}
+            />
+          ))}
+        </>
       }
       
     </div>
