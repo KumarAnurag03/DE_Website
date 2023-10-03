@@ -228,7 +228,7 @@ export const Contact = () => {
           letterSpacing: 1,
           lineHeight: 1.5
         }}
-         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}>Phone: 647-327-4487</Typography>
+         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}>Phone: 705-300-1123</Typography>
          <Typography
         style={{
           // paddingTop:"2vh",
