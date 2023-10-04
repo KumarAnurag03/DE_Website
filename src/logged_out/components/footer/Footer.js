@@ -77,7 +77,7 @@ const styles = (theme) => ({
 const infos = [
   {
     icon: <PhoneIcon />,
-    description: "647-327-4487",
+    description: "705-300-1123",
   },
   {
     icon: <MailIcon />,

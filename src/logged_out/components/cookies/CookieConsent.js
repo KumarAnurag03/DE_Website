@@ -95,9 +95,9 @@ function CookieConsent(props) {
       action={
         <Fragment>
           <Box mr={1}>
-            <Button color="primary" onClick={handleCookieRulesDialogOpen}>
+            {/* <Button color="primary" onClick={handleCookieRulesDialogOpen}>
               More details
-            </Button>
+            </Button> */}
           </Box>
           <Button color="primary" onClick={onAccept}>
             Got it!
