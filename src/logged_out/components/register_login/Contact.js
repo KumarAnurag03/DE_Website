@@ -10,6 +10,7 @@ export const Contact = () => {
 
   useEffect(()=>{
     document.title="Contacts"
+    window.scrollTo(0,0);
   },[])
 
   return (

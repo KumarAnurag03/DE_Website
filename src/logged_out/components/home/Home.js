@@ -5,6 +5,11 @@ import FeatureSection from "./FeatureSection";
 import PricingSection from "./PricingSection";
 
 function Home(props) {
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
+
   const { selectHome } = props;
   useEffect(() => {
     selectHome();

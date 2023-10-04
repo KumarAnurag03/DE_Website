@@ -112,6 +112,7 @@ function HeadSection(props) {
 
   useEffect(()=>{
     document.title="Job-Seekers"
+    window.scrollTo(0,0);
   },[])
 
   const history=useHistory();

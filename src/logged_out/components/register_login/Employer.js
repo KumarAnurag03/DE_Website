@@ -11,6 +11,7 @@ export const Employer = () => {
 
   useEffect(()=>{
     document.title="Employers"
+    window.scrollTo(0,0);
   })
 
   const history = useHistory();
