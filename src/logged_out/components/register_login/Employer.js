@@ -128,7 +128,7 @@ export const Employer = () => {
             // height:"50%"
           }}
           >
-            <Grid item xs={12} md={10}
+            <Grid item xs={10} md={10} lg={10}
           sx={{
             // backgroundColor:"rgba(71,42,178,0.3)",
             paddingLeft:"5vw",
@@ -211,7 +211,7 @@ export const Employer = () => {
             // height:"30%"
           }}
           >
-            <Grid item xs={12} md={10}
+            <Grid item xs={10} md={10}
           sx={{
             // backgroundColor:"rgba(71,42,178,0.3)",
             paddingLeft:"5vw",

@@ -6,6 +6,7 @@ import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useWidth from "../../../shared/functions/useWidth";
+import Finlogo from "../../../images/final-logo.png";
 import Logo from '../../../images/Studio-Project_2-removebg-preview.png'
 import "./PricingSection.css"
 
@@ -143,7 +144,7 @@ function PricingSection(props) {
     // </div>
     <>
       <div className="logo_large">
-        <img src={Logo} alt="" />
+        <img src={Finlogo} alt="" />
       </div>
     </>
   );

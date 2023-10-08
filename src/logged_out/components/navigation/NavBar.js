@@ -119,12 +119,12 @@ function NavBar(props) {
           </div>
           <div>
             <Hidden mdUp>
-              <IconButton
+              <IconButton 
                 className={classes.menuButton}
                 onClick={handleMobileDrawerOpen}
                 aria-label="Open Navigation"
                 size="large">
-                <MenuIcon color="primary" />
+                <MenuIcon color="secondary" />
               </IconButton>
             </Hidden>
             <Hidden mdDown>

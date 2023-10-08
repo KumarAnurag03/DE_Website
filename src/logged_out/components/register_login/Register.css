@@ -35,3 +35,113 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
 }
+.name{
+    width: 60%;
+}
+.license{
+    width: 60%;
+}
+.workex{
+    width: 60%;
+}
+.specs{
+    width: 60%;
+}
+.edu{
+    width: 60%;
+}
+.edu1{
+    width: 60%;
+}
+/* .disclamer{
+    width: 60%;
+} */
+.respond{
+    width: 60%;
+}
+/* .form_input_col1{
+    margin-left: 6vw;
+    width: 15vw;
+} */
+.eduyr{
+    width: 60%;
+}
+.grad{
+    width: 60%;
+}
+.Comp_Phone{
+    width: 60%;
+}
+.form_input_col{
+    margin-left: 6vw;
+    width: 15vw;
+}
+.Job_Salary{
+    width: 60%;
+}
+/* .name_rel{
+    width: 60%;
+} */
+.license1{
+    width: 60%;
+}
+
+@media screen and (max-width:600px) {
+    .name {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .form_input_col{
+        width: fit-content;
+    }
+    .disclamer{
+        width: fit-content;
+    }
+    .respond{
+        width: 100%;
+    }
+    .Job_Salary{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        /* justify-content: center; 
+        align-items: center; */
+    }
+    /* .name_rel{
+        width: fit-content;
+    } */
+    .license{
+        width: 100%;
+    }
+    .eduyr{
+        width: 100%;
+    }
+    .edu{
+        width: 100%;
+    }
+    .edu1{
+        width: 100%;
+    }
+    .license1{
+        width: 100%;
+    }
+    .workex{
+        width: fit-content;
+    }
+    .grad{
+        width: 100%;
+    }
+    .specs{
+        width: 100%;
+    }
+    .Comp_Phone{
+        width: 100%;
+    }
+    .phone_cell{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

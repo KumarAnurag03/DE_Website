@@ -1,4 +1,4 @@
-import { Box, Typography,TextField,Button } from '@mui/material'
+import { Box, Typography,TextField,Button, Link } from '@mui/material'
 import React from 'react'
 import { useState } from 'react'
 import './JobPosting.css'
@@ -8,9 +8,12 @@ import { useStateValue } from '../../../MyContexts/StateProvider'
 import { JobCard } from './JobCard'
 import { useEffect } from 'react'
 import LoginDialog from './LoginDialog'
+import { useHistory } from 'react-router-dom'
 
 
 export const Jobposting = ({openLoginDialog}) => {
+
+    const history = useHistory();
 
     const [{user},dispatch]=useStateValue();
     const jobsRef=db.collection('Listings');
@@ -153,6 +156,9 @@ export const Jobposting = ({openLoginDialog}) => {
                     <Button onClick={handleSubmit}>
                         Post
                     </Button>
+                    <Button onClick={()=>{window.location.href='https://docs.google.com/spreadsheets/d/1--uXfoypXhJOMa92KVL-yRN8q2jLgqjITWWbav3SbwA/edit#gid=0'}}>
+                        View user details
+                    </Button>
                     <Typography color={"rgba(71,42,178)"} variant='h3' fontFamily={"serif"}
                     sx={{
                         display:"flex",
@@ -178,7 +184,12 @@ export const Jobposting = ({openLoginDialog}) => {
 
                 :
 
-                <div><Button onClick={openLoginDialog()}>Login</Button></div>
+                <div style={{
+                    marginTop:"15vh"
+                }}>
+                    <Button onClick={()=>{openLoginDialog()}}>Login</Button>
+                    <Button onClick={()=>{history.push('/')}}>Go Back To Home Page</Button>
+                </div>
         } 
     </>
   )
