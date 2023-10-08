@@ -22,8 +22,8 @@ export const Jobposting = ({openLoginDialog}) => {
     useEffect(()=>{
         if(user){
             jobsRef
-            .orderBy('createdAt')
-            .onSnapshot(querySnapshot=>{
+            .orderBy('createdAt').get()
+            .then(querySnapshot=>{
             const data=querySnapshot.docs.map(doc=>({
                 ...doc.data(),
                 id:doc.id

@@ -21,14 +21,21 @@ export const JobListing = ({openLoginDialog}) => {
 
   useEffect(()=>{
     jobsRef
-    .orderBy('createdAt')
-    .onSnapshot(querySnapshot=>{
+    .orderBy('createdAt').get()
+    .then(querySnapshot=>{
       const data=querySnapshot.docs.map(doc=>({
         ...doc.data(),
         id:doc.id
-      }));
-      setJobList(data);
+    }));
+    setJobList(data);
     })
+    // .onSnapshot(querySnapshot=>{
+    //   const data=querySnapshot.docs.map(doc=>({
+    //     ...doc.data(),
+    //     id:doc.id
+    //   }));
+    //   setJobList(data);
+    // })
   },[user,jobsRef])
 
   return (
