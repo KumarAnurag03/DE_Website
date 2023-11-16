@@ -141,7 +141,7 @@ function FeatureSection(props) {
         <Button
           style={{
             // color:"black",
-            borderColor:"blue",
+            borderColor:"rgba(0,255,255)",
             width: "90vw",
             height:"9vh",
             marginLeft:"5%",
@@ -150,7 +150,7 @@ function FeatureSection(props) {
           variant="outlined"
           sx={{
             ":hover":{
-              bgcolor:"#00008b !important",
+              bgcolor:"rgba(0,255,255) !important",
               color:"#FFF"
             }
           }}
@@ -163,7 +163,7 @@ function FeatureSection(props) {
         <Button
           style={{
             // color:"black",
-            borderColor:"blue",
+            borderColor:"rgba(0,255,255)",
             width: "90vw",
             height:"9vh",
             marginTop:"5%",
@@ -172,7 +172,7 @@ function FeatureSection(props) {
           variant="outlined"
           sx={{
             ":hover":{
-              bgcolor:"#00008b !important",
+              bgcolor:"rgba(0,255,255) !important",
               color:"#FFF"
             }
           }}

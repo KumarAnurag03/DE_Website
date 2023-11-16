@@ -5,14 +5,22 @@
     margin-bottom:-10%;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:700px) {
     .logo_large{
         /* display:flex;
     justify-content:center;
     align-items:center; */
-    overflow-x: auto;
-    padding-left: 50vw;
-    width: 450px;
-    height: 450px;
+    /* overflow-x: auto; */
+    /* padding-left: 50vw; */
+    /* width: 50vw !important; */
+    display:flex;
+    /* width: 50vw; */
+    align-items: center;
+    justify-content: center;
+    /* height: 450px; */
+    }
+
+    .logo_large>img{
+        width:100%;
     }
 }

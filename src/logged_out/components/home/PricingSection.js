@@ -6,7 +6,7 @@ import PriceCard from "./PriceCard";
 import calculateSpacing from "./calculateSpacing";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import useWidth from "../../../shared/functions/useWidth";
-import Finlogo from "../../../images/final-logo.png";
+import Finlogo from "../../../images/Fusion-_Final-removebg-preview.png";
 import Logo from '../../../images/Studio-Project_2-removebg-preview.png'
 import "./PricingSection.css"
 

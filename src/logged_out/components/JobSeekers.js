@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import Reg, { Register } from "./register_login/Register";
@@ -7,7 +7,8 @@ import withStyles from "@mui/styles/withStyles";
 // import WaveBorder from "../../../shared/components/WaveBorder";
 // import ZoomImage from "../../../shared/components/ZoomImage";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Drive from '../../images/drive.jpg'
+import Lap from "../../images/jobmob.jpg";
+import Ct from "../../images/coat.jpg";
 import Stair from "../../images/job-seek.jpg";
 // import './HeadSection.css'
 import WaveBorder from "../../shared/components/WaveBorder";
@@ -67,36 +68,45 @@ const styles = (theme) => ({
   wrapper: {
     backgroundPosition: "relative",
     // backgroundImage:"url('https://cdn.pixabay.com/photo/2017/10/31/09/55/dream-job-2904780_1280.jpg')",
-    backgroundImage:`url(${Stair})`,
+    backgroundImage:(window.innerWidth>946)?`url(${Ct})`:`url(${Lap})`,
     backgroundSize:"cover",
     // backgroundColor: theme.palette.secondary.main,
     backgroundRepeat: "no-repeat",
-    paddingBottom: theme.spacing(2),
+    display:"flex",
+    // border:"3px red solid"
+    // paddingBottom: theme.spacing(2),s
+    // paddingTop:"-5vh"
   },
   image: {
-    maxWidth: "100%",
+    // maxWidth: "100%",
     verticalAlign: "middle",
     borderRadius: theme.shape.borderRadius,
     boxShadow: theme.shadows[4],
   },
   container: {
-    backgroundColor:"rgba(255,255,255,0.4)",
-    borderRadius:"20px",
-    paddingTop:"5vh",
-    paddingBottom:"5vh",
-    paddingLeft:"6vw",
-    paddingRight:"4vw",
-    marginTop: theme.spacing(6),
-    marginBottom: theme.spacing(15),
-    [theme.breakpoints.down("lg")]: {
-      marginBottom: theme.spacing(30),
-    },
-    [theme.breakpoints.down("md")]: {
-      marginBottom: theme.spacing(30),
-    },
-    [theme.breakpoints.down("md")]: {
-      marginBottom: theme.spacing(30),
-    },
+    backgroundColor:"rgba(0,0,0,0.6)",
+    // borderRadius:"20px",
+    paddingTop:"25vh",
+    paddingBottom:"20vh",
+    paddingLeft:(window.innerWidth<1369)?"9vw":"15vw",
+    paddingRight:(window.innerWidth<1369)?"5vw":"10vw",
+    // height:"100%",
+    // width:"120vw",
+    marginTop:"-17vh",
+    maxWidth:"100vw"
+    // marginLeft:"-5vw",
+    // marginRight:"-15vw",
+    // marginTop: theme.spacing(6),
+    // marginBottom: theme.spacing(15),
+    // [theme.breakpoints.down("lg")]: {
+    //   marginBottom: theme.spacing(30),
+    // },
+    // [theme.breakpoints.down("md")]: {
+    //   marginBottom: theme.spacing(30),
+    // },
+    // [theme.breakpoints.down("md")]: {
+    //   marginBottom: theme.spacing(30),
+    // },
   },
   containerFix: {
     [theme.breakpoints.up("md")]: {
@@ -109,6 +119,16 @@ const styles = (theme) => ({
 });
 
 function HeadSection(props) {
+
+  useEffect(()=>{
+    // console.log(styles.wrapper);
+    if(window.innerWidth<946){
+      // wrapper.backgroundImage=`url(${Lap})`
+    }
+    else{
+      // styles.wrapper.backgroundImage=`url(${Ct})`
+    }
+  },[window])
 
   useEffect(()=>{
     document.title="Job-Seekers"
@@ -131,17 +151,21 @@ function HeadSection(props) {
 
   return (
     <Fragment>
-      <div className={classNames("lg-p-top", classes.wrapper)}>
+      <div className={classNames("lg-p-top", classes.wrapper,"hello")}>
         <div className={classNames("container-fluid", classes.container,"picture")}>
           {/* <Typography variant="h4" fontFamily={"serif"} display={"inline"} color={"rgba(0,0,0)"}>At </Typography>
           <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>D</Typography>
           <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>ream </Typography>
           <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={theme.palette.secondary.main}>E</Typography>
           <Typography variant="h3" fontFamily={"serif"} display={"inline"} color={"rgba(72, 41, 178,0.8)"}>mployment,</Typography> */}
-          <Typography variant="h4" color={"rgba(0,0,0)"} fontFamily={"serif"}
+          <Typography sx={{
+            letterSpacing: 2,
+            lineHeight:1.5
+          }} variant="h5" color={"rgba(255,255,255)"} fontFamily={"sans-serif"}
+          className="jobSeekers_text"
           >
             We understand that the journey to finding your ideal job can be both exciting and challenging. That's
-why Dream Employment is here to support you every step of the way. Whether you're a seasoned
+why Fusion Staffing is here to support you every step of the way. Whether you're a seasoned
 professional looking for your next career move or a recent graduate eager to kick-start your journey,
 Explore <b>Available Opportunities</b> to discover a wide range of job openings from leading companies in
 various industries, or <b>Apply with Us</b> to benefit from our team's expertise. Your dream job is within
@@ -275,7 +299,7 @@ reach, and we're here to help you seize it. Join us on this path to success!
         <Button
           style={{
           // color:"blue",
-          borderColor:"blue",
+          borderColor:"rgba(0,255,255)",
           width: "90vw",
           height: "10vh",
           marginTop:"5%",
@@ -284,7 +308,7 @@ reach, and we're here to help you seize it. Join us on this path to success!
           variant="outlined"
           sx={{
           ":hover":{
-              bgcolor:"#00008b !important",
+              bgcolor:"rgba(0,255,255) !important",
               color:"#FFF"
           }
           }}
@@ -296,7 +320,7 @@ reach, and we're here to help you seize it. Join us on this path to success!
         <Button
           style={{
           // color:"blue",
-          borderColor:"blue",
+          borderColor:"rgba(0,255,255)",
           width: "90vw",
           height: "10vh",
           marginTop:"5%",
@@ -305,7 +329,7 @@ reach, and we're here to help you seize it. Join us on this path to success!
           variant="outlined"
           sx={{
           ":hover":{
-              bgcolor:"#00008b !important",
+              bgcolor:"rgba(0,255,255) !important",
               color:"#FFF"
           }
           }}

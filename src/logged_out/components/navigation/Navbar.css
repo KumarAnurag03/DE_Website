@@ -1,17 +1,25 @@
 .logo{
-    height: 20vh;
-    max-width: 200%;
+    height: 18vh;
+    min-width: 180%;
     /* width: 20vw; */
     margin: -20%;
     /* padding-top:6%; */
     padding-left: 5%;
 }
+.text-white{
+    /* font-style: italic; */
+}
+
+.runningHand{
+    text-transform: lowercase;
+}
 
 @media screen and (max-width:600px) {
     .logo{
-        padding-top: 5%;
-        max-width: 120%;
-        height: 23vh;
+        padding-top: 2%;
+        margin-left: 3%;
+        min-width: 150%;
+        height: 15vh;
     }
     
 }

@@ -12,7 +12,7 @@ import NavigationDrawer from "../../../shared/components/NavigationDrawer";
 import CallIcon from '@mui/icons-material/Call';
 import Logo from '../../../images/Logo.png';
 import  Newlogo  from "../../../images/Studio-Project_2-removebg-preview.png";
-import Finlogo from "../../../images/final-logo.png";
+import Finlogo from "../../../images/Fusion-_Final-removebg-preview.png";
 import './Navbar.css'
 import { useStateValue } from "../../../MyContexts/StateProvider";
 import { auth } from "../../../firebase";
@@ -28,7 +28,8 @@ const styles = theme => ({
   },
   menuButtonText: {
     fontSize: theme.typography.body1.fontSize,
-    fontWeight: theme.typography.h6.fontWeight
+    fontWeight: theme.typography.h6.fontWeight,
+    textTransform:"none"
   },
   brandText: {
     fontFamily: "'Baloo Bhaijaan', cursive",
@@ -42,15 +43,6 @@ const styles = theme => ({
 function NavBar(props) {
 
   const [{user},dispatch]=useStateValue();
-
-  const handleClick=()=>{
-    if(user){
-      auth.signOut();
-    }
-    else{
-      openLoginDialog();
-    }
-  }
 
   const {
     classes,
@@ -84,11 +76,11 @@ function NavBar(props) {
       // onClick: openLoginDialog,
       icon: <CallIcon className="text-white" />
     },
-    {
-      link: "/jobposting",
-      name: "ADMIN",
-      icon: <BookIcon className="text-white" />
-    }
+    // {
+    //   link: "/jobposting",
+    //   name: "ADMIN",
+    //   icon: <BookIcon className="text-white" />
+    // }
     // {
     //   name:user?"Logout":"Login",
     //   onClick:handleClick

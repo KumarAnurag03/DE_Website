@@ -23,7 +23,7 @@ export const Employer = () => {
   return (
     <div
     style={{
-      marginTop:"8vh"
+      marginTop:"6vh"
     }}
     >
         {/* <div className='wrapper'
@@ -128,26 +128,26 @@ export const Employer = () => {
             // height:"50%"
           }}
           >
-            <Grid item xs={10} md={10} lg={10}
+            <Grid item xs={12} md={12} lg={12}
           sx={{
             // backgroundColor:"rgba(71,42,178,0.3)",
             paddingLeft:"5vw",
             paddingRight:"5vw",
             paddingBottom:"3vh",
-            backgroundColor:"rgba(0,0,0,0.8)",
+            backgroundColor:"rgba(0,0,0,0.6)",
             borderRadius:"15px",
             // display:"flex",
             // flexDirection:"column",
             // justifyContent:"center",
-            marginLeft:"7vw",
-            marginTop:"5vh",
-            marginBottom:"5vh"
+            // marginLeft:"7vw",
+            // marginTop:"5vh",
+            // marginBottom:"5vh"
           }}
           >
             
             <Typography variant='h4' color={"rgba(255,255,255,0.7)"} fontFamily={"serif"}
             style={{
-              paddingTop:"5vh",
+              paddingTop:"14vh",
               textAlign:"center",
               // paddingLeft:"25vw",
               // paddingRight:"25vw",
@@ -169,6 +169,7 @@ export const Employer = () => {
             <Typography variant='h5' color={"rgba(255,255,255,0.7)"} fontFamily={"sans-serif"}
             style={{
               textAlign:"left",
+              paddingTop:"3vh",
               // paddingLeft:"25vw",
               // paddingRight:"25vw",
               letterSpacing: 1,
@@ -180,6 +181,7 @@ export const Employer = () => {
             <Typography variant='h5' color={"rgba(255,255,255,0.7)"} fontFamily={"sans-serif"}
             style={{
               textAlign:"left",
+              paddingTop:"3vh",
               // paddingLeft:"25vw",
               // paddingRight:"25vw",
               letterSpacing: 1,
@@ -190,17 +192,24 @@ export const Employer = () => {
             <Typography variant='h5' color={"rgba(255,255,255,0.7)"} fontFamily={"sans-serif"}
             style={{
               textAlign:"left",
+              paddingTop:"3vh",
               // paddingLeft:"25vw",
               // paddingRight:"25vw",
+              paddingBottom:"15vh",
               letterSpacing: 1,
               lineHeight: 1.3
             }}
-            ><b><LabelImportantOutlinedIcon/> Diverse Talent Pool:</b> Whether  you need AZ, DZ or G drivers, warehouse   staff, or skilled industrial
+            ><b><LabelImportantOutlinedIcon/> Diverse Talent Pool:</b> Whether  you need AZ, DZ Drivers, Healthcare Staff, or skilled industrial
             workers, we have a diverse pool of talent ready to meet your staffing needs.</Typography>
           </Grid>
+          
             
           </Grid>
         </Grid>
+        <div style={{color:"white",
+          width:"100%",
+        height:"1vh"}}
+          ></div>
         <Grid container>
           <Grid item xs={12} md={12} lg={12}
           sx={{
@@ -211,17 +220,17 @@ export const Employer = () => {
             // height:"30%"
           }}
           >
-            <Grid item xs={10} md={10}
+            <Grid item className='wcu' xs={12} md={12}
           sx={{
             // backgroundColor:"rgba(71,42,178,0.3)",
             paddingLeft:"5vw",
             borderRadius:"15px",
             paddingRight:"5vw",
             paddingBottom:"3vh",
-            backgroundColor:"rgba(0,0,0,0.8)",
-            marginLeft:"7vw",
-            marginTop:"5vh",
-            marginBottom:"5vh"
+            backgroundColor:"rgba(0,0,0,0.6)",
+            // marginLeft:"7vw",
+            // marginTop:"5vh",
+            // marginBottom:"5vh"
           //   display:"flex",
           //   flexDirection:"column",
           //   justifyContent:"center",
@@ -231,7 +240,7 @@ export const Employer = () => {
             
             <Typography color={"rgba(255,255,255,0.7)"} variant='h4' fontFamily={"serif"}
             style={{
-              paddingTop:"5vh",
+              paddingTop:"15vh",
               textAlign:"center",
               // paddingLeft:"25vw",
               // paddingRight:"25vw",
@@ -259,13 +268,24 @@ export const Employer = () => {
               letterSpacing: 1,
               lineHeight: 1.2
             }}
+            ><b><LabelImportantOutlinedIcon/> Healthcare Staffing:</b> Our services are designed to ensure that your medical facilities have access to highly qualified and compassionate Healthcare Professionals, including Nurses, Personal Support Workers, administrative staff, and more.
+            </Typography>
+            <Typography color={"rgba(255,255,255,0.7)"} variant='h5' fontFamily={"sans-serif"}
+            style={{
+              paddingTop:"3vh",
+              textAlign:"left",
+              // paddingLeft:"25vw",
+              // paddingRight:"25vw",
+              letterSpacing: 1,
+              lineHeight: 1.2
+            }}
             ><b><LabelImportantOutlinedIcon/> Trucking Professionals:</b> From long-haul truckers to local delivery drivers, we've got your
             transportation staffing covered.
             </Typography>
             <Typography color={"rgba(255,255,255,0.7)"} variant='h5' fontFamily={"sans-serif"}
             style={{
               paddingTop:"3vh",
-              paddingBottom:"7vh",
+              paddingBottom:"15vh",
               textAlign:"left",
               // paddingLeft:"25vw",
               // paddingRight:"25vw",
@@ -302,11 +322,11 @@ export const Employer = () => {
               alignItems:"center"
             }}
              variant='h4' color={"rgba(0,0,0)"} fontFamily={"serif"}
-            >Hire Dream Employment Recruitment Agency to get started</Typography>
+            >Hire Fusion Staffing to get started</Typography>
             <Button
               style={{
               // color:"blue",
-              borderColor:"blue",
+              borderColor:"rgba(0,255,255)",
               width: "65vw",
               height: "8vh",
               marginTop:"5%",
@@ -315,7 +335,7 @@ export const Employer = () => {
               variant="outlined"
               sx={{
               ":hover":{
-                  bgcolor:"#00008b !important",
+                  bgcolor:"rgba(0,255,255) !important",
                   color:"#FFF"
               }
               }}

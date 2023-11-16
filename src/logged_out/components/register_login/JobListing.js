@@ -26,8 +26,8 @@ export const JobListing = ({openLoginDialog}) => {
       const data=querySnapshot.docs.map(doc=>({
         ...doc.data(),
         id:doc.id
-    }));
-    setJobList(data);
+      }));
+      setJobList(data);
     })
     // .onSnapshot(querySnapshot=>{
     //   const data=querySnapshot.docs.map(doc=>({

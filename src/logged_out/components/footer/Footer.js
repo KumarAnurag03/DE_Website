@@ -81,7 +81,7 @@ const infos = [
   },
   {
     icon: <MailIcon />,
-    description: "info@Dreamemployment.ca",
+    description: "hr@Fusionstaffing.ca",
   },
 ];
 
@@ -116,7 +116,7 @@ const socialIcons = [
       </svg>
     ),
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/dreamempoyment/",
+    href: "https://www.linkedin.com/company/fusionstaffing-canada",
   },
   {
     icon: (
@@ -132,7 +132,7 @@ const socialIcons = [
       </svg>
     ),
     label: "Twitter",
-    href: "https://instagram.com/dreamemployment.ca?igshid=OGQ5ZDc2ODk2ZA==",
+    href: "https://instagram.com/fusionstaffing.ca?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr",
   },
 ];
 
@@ -213,7 +213,7 @@ function Footer(props) {
           <Grid item xs={12} md={6} lg={3}></Grid>
           <Grid item xs={12} md={6} lg={4}>
             <Typography variant="h6" paragraph className="text-white">
-              Dream Employment
+              Fusion Staffing
             </Typography>
             <Typography style={{ color: "#8f9296" }} paragraph>
             Our staffing solutions are adaptable to your business needs,

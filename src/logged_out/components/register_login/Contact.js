@@ -32,7 +32,7 @@ export const Contact = () => {
         flexDirection:"column",
         justifyContent:"center",
         alignItems:"center",
-        marginTop:"6vh",
+        marginTop:"4vh",
         marginBottom:"2vh"
         // padding:"100px 50px"
       }}
@@ -73,7 +73,7 @@ export const Contact = () => {
         
       </Box>
       <div style={{
-        backgroundColor:"rgba(0,0,0,1)",
+        backgroundColor:"rgba(0,0,0,0.7)",
         width:"100%",
         height:"0.7vh"
       }}></div>
@@ -177,21 +177,26 @@ export const Contact = () => {
           alignItems:"start"
         }}
         >
-          <Grid item xs={12} md={11}
+          <Grid item xs={12} md={12} className='item1'
           style={{
             borderRadius:"10px",
-          backgroundColor:"rgba(0,0,0,0.8)",
+          backgroundColor:"rgba(0,0,0,0.6)",
+          // width:"100%",
           paddingTop:"1vh",
           paddingBottom:"2vh",
           paddingLeft:"4vw",
           paddingRight:"4vw",
-          marginTop:"25vh",
-          marginBottom:"25vh"
+          // marginLeft:"-10vw",
+          // marginLeft:"-10vw",
+          // height:"100%",
+          // marginTop:"25vh",
+          // marginBottom:"25vh"
         }}
         >
         <Typography
         style={{
-          paddingTop:"2vh",
+          paddingTop:(window.innerWidth<=938)?"15vh":"20vh",
+          // paddingBottom:"10vh",
           textAlign:"center",
           paddingLeft:"5vw",
           paddingRight:"5vw",
@@ -201,18 +206,18 @@ export const Contact = () => {
          color={"rgba(255,255,255)"} variant='h4' fontFamily={"serif "}>Ready to optimize your staffing process?</Typography>
         <Typography
         style={{
-          // paddingTop:"2vh",
+          paddingTop:"2vh",
           textAlign:"center",
           paddingLeft:"5vw",
           paddingRight:"5vw",
           letterSpacing: 1,
           lineHeight: 1.5
         }}
-         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}> Contact us today to discuss your trucking and industrial
+         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}> Contact us today to discuss your Healthcare, Trucking and Industrial
           staffing needs. Let's drive success together!</Typography>
         <Typography
         style={{
-          paddingTop:"4vh",
+          paddingTop:"8vh",
           textAlign:"center",
           paddingLeft:"5vw",
           paddingRight:"5vw",
@@ -239,12 +244,12 @@ export const Contact = () => {
           letterSpacing: 1,
           lineHeight: 1.5
         }}
-         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}>Email: info@Dreamemployment.ca</Typography>
+         color={"rgba(255,255,255)"} variant='h5' fontFamily={"sans-serif "}>Email: hr@Fusionstaffing.ca</Typography>
         <Typography
         style={{
-          paddingTop:"4vh",
+          paddingTop:"8vh",
           textAlign:"center",
-          paddingBottom:"2vh",
+          paddingBottom:"20vh",
           paddingLeft:"5vw",
           paddingRight:"5vw",
           letterSpacing: 1,

@@ -2,7 +2,8 @@ export const initialState={
     user:false,
     firstName:'',
     lastName:'',
-    company:[]
+    company:[],
+    jobSeekersImage:''
 }
 
 const reducer=(state,action)=>{
@@ -17,6 +18,11 @@ const reducer=(state,action)=>{
             return {
                 ...state,
                 company:action.company
+            }
+        case 'CHANGE_JOB_SEEKER_IMAGE':
+            return{
+                ...state,
+                jobSeekersImage:action.image
             }
         default:
             return state;

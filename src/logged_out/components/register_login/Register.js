@@ -297,7 +297,7 @@ export const Register = () => {
         "Monday":false,"Tuesday":false,"Wednesday":false,"Thursday":false,"Friday":false,"Saturday":false,"Sunday":false
     })
     const [certifications,setCertifications]=useState({
-        "Smart Serve":false,"Food Handlers Certificate":false
+        "PSW":false,"RPN":false,"RN":false
     })
     const [forklift,setForklift]=useState({
         "Counter Balance":false,"Propane":false,"Electric":false,"Cross-Dock":false,"Clamp":false,"Raymond Reach":false,
@@ -1039,19 +1039,28 @@ export const Register = () => {
                     <FormControlLabel
                     value="monday"
                     control={<Checkbox />}
-                    label="Smart Serve"
+                    label="PSW"
                     labelPlacement="end"
-                    checked={certifications['Smart Serve']}
-                    name="Smart Serve"
+                    checked={certifications['PSW']}
+                    name="PSW"
                     onChange={handleCertificationsChange}
                     />
                     <FormControlLabel
                     value="tuesday"
                     control={<Checkbox />}
-                    label="Food Handlers Certificate"
+                    label="RPN"
                     labelPlacement="end"
-                    checked={certifications['Food Handlers Certificate']}
-                    name="Food Handlers certificate"
+                    checked={certifications['RPN']}
+                    name="RPN"
+                    onChange={handleCertificationsChange}
+                    />
+                    <FormControlLabel
+                    value="tuesday"
+                    control={<Checkbox />}
+                    label="RN"
+                    labelPlacement="end"
+                    checked={certifications['RN']}
+                    name="RN"
                     onChange={handleCertificationsChange}
                     />
                 </FormGroup>
@@ -3113,7 +3122,7 @@ export const Register = () => {
             paddingBottom:"2vh"
         }} 
         >
-        I hereby certify that the information given on this application form and enclosures to be true and accurate, and grant Dream Employment permission to use this information at their discretion. If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release. I acknowledge that will
+        I hereby certify that the information given on this application form and enclosures to be true and accurate, and grant Fusion Staffing permission to use this information at their discretion. If this application leads to employment, I understand that false or misleading information in my application or interview may result in my release. I acknowledge that will
 deduct the cost of any ETR bill fees from my pay. This company is under the Elect to Work Policy.
         </Typography>
         <Button sx={{

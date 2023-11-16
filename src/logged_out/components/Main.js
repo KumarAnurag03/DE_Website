@@ -33,7 +33,7 @@ function Main(props) {
   const selectHome = useCallback(() => {
     smoothScrollTop();
     document.title =
-      "Dream Employment";
+      "Fusion Staffing";
     setSelectedTab("Home");
   }, [setSelectedTab]);
 
